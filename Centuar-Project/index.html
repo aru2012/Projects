@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Centuar_Login</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/centuar_global.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="centuar-logo">
+				<h3>Centuar</h3><span>The perfect solution for your demands.</span>
+			</div>
+		</div>
+		<div class="content">
+			<div class="heading">
+				<h1>My Centuar <span class="login_text">Login</span></h1>
+			</div>		
+			<div class="banner">
+				<div class="login_form">
+					<form name="form" action="Dashboard.html">
+						<label>User ID</label><br />
+						<input type="text" id="username" placeholder="Enter account email address"/><br />
+						<p id="err1"></p>
+						<label>Password</label><br />
+						<input type="password" id="password" placeholder="Enter password"/><br />
+						<p id="err2"></p>
+						<input type="checkbox"/><span class="rem_id">Remember my User ID</span>
+						<button id="btn">LOG IN</button> 
+					</form>
+					<ul class="help">
+						<li><a href="#">Forgot Password?</a></li>
+						<li><a href="#">Trouble Signing in</a></li>
+					</ul>		
+				</div>
+				<div class="banner_image">
+					<img class="imgbanner" src="images/ad-image.png" width="420" height="210">
+					<h2>Access Your Account</h2>
+					<h2><i>Anywhere, Anytime</i></h2>
+					<p>This is a photoshop version of Lorem ipsum. Proin gravida nibh vel velit auctor aliquet Aenean solicitudin, lorem quis bibendum aucto.</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<h6>Copyright 2014 Centuar Corporation</h6>
+			<ul class="footer_menu">
+				<li><a href="#">MSDS</a></li>
+				<li><a href="#">Terms and Conditions></a> </li>
+				<li><a href="#">Privacy Statement</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			validate();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My account</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/centuar_global.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<link rel="stylesheet" href="css/font-awesome-4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="centuar-logo">
+				<h3>Centuar</h3><span>The perfect solution for your demands.</span>
+			</div>
+			<div id="menu">
+				<ul class="menu_list">
+					<li><div id="cart"></div></li>
+					<li id="admin"><div class="tab">ADMIN</div><div class="arrows"><i class="fa fa-caret-down fa-lg"></i></div></li>
+					<li><div class="tab">CUSTOMER</div></li>
+					<li>
+						<div class="tab">COLLEGE KREBS</div><div class="arrows"><i class="fa fa-caret-down fa-lg"></i></div>
+							<ul id="sub_menu" class="shadow">
+								<li><a href="#">YOUR PROFILE</a></li>
+								<li><a href="#">CUSTOMER/SHIP-TO LIST</a></li>
+								<li><a href="#">PASSWORD CHANGE</a></li>
+								<li><a href="#">ACCOUNT PREFERENCES</a></li>
+								<li><a href="#">YOUR TEMPLATE</a></li>
+							</ul>
+					</li>
+					<li><div class="tab" id="logout">LOG OUT</div></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="heading">
+				<h1>My Centuar<span class="login_text">Account</span></h1>
+				<div class="search_wrapper">
+					<div class="search">
+					<input type="text" placeholder="Quick Search"/>
+					<select><option value="#Type">#Type</option>
+					<option value="1">Option1</option>
+					<option value="2">Option2</option>
+					</select>
+					<i class="fa fa-caret-down fa-lg" id="down_icon"></i></div>
+					<button id="search_button">Search</button>
+				</div>
+			</div>			
+			<div class= "content_menu">
+				<div id="c_menu">
+					<ul class="menu_list">
+						<li class="activ"><div id="home"><i class="fa fa-home fa-2x"></i></div></li>
+						<li><div class="tab">DASHBOARD</div></li>
+						<li>
+							<div class="tab">ORDER</div>
+							<div class="orange_arrow"><i class="fa fa-caret-down fa-lg"></i></div>
+							<ul id="content_sub_menu" class="shadow">
+								<li><a href="Order_Creation.html">CREATE ORDER</a></li>
+								<li><a href="#">CHANGE ORDER</a></li>
+								<li><a href="#">CREATE FROM TEMPLATE</a></li>
+							</ul>
+						</li>
+						<li><div class="tab">STATUS</div><div class="orange_arrow"><i class="fa fa-caret-down fa-lg"></i></div></li>
+						<li><div class="tab">DOCUMENTS</div></li>
+						<li><div class="tab">CONTACT</div></li>
+					</ul>
+				</div>
+			</div>
+			<div class="dashboard_wrapper">
+				<div class="wrap_accords">
+					<div class="accord">
+						<div class="accord_head">
+							<div class="order_ls">
+								<div class="expand"><i class="fa fa-plus-circle fa-2x"></i></div>
+								<h3>Your Recent Orders</h3>
+							</div>
+							<div class="order_rs">
+								<h6><a href="#">View All Orders</a></h6>
+							</div>
+						</div>
+						<div class="accord_body">
+							<div class="entry">
+								<div>Order #</div>
+								<div>PO #</div>
+								<div>Date</div>
+								<div>Order</div>
+								<div>Acknowledgement</div>
+							</div>
+							<div class="entry">
+								<div><a href="#">1234567</a></div>
+								<div>1234567</div>
+								<div>06/20/2014</div>
+								<div class="sprite sprite_adobe"></div>
+								<div class="sprite sprite_mail"></div>
+							</div>
+							<div class="entry">
+								<div><a href="#">1234567</a></div>
+								<div>1234567</div>
+								<div>06/20/2014</div>
+								<div class="sprite sprite_adobe"></div>
+								<div class="sprite sprite_mail"></div>
+							</div>
+							<div class="entry">
+								<div><a href="#">1234567</a></div>
+								<div>1234567</div>
+								<div>06/20/2014</div>
+								<div class="sprite sprite_adobe"></div>
+								<div class="sprite sprite_mail"></div>
+							</div>
+							<div class="entry">
+								<div><a href="#">1234567</a></div>
+								<div>1234567</div>
+								<div>06/20/2014</div>
+								<div class="sprite sprite_adobe"></div>
+								<div class="sprite sprite_mail"></div>
+							</div>
+							<div class="entry">
+								<div><a href="#">1234567</a></div>
+								<div>1234567</div>
+								<div>06/20/2014</div>
+								<div class="sprite sprite_adobe"></div>
+								<div class="sprite sprite_mail"></div>
+							</div>
+						</div>
+					</div>
+					<div class="accord">
+						<div class="accord_head">
+							<div class="invoice_ls">
+								<div class="expand"><i class="fa fa-plus-circle fa-2x"></i></div>
+								<h3>Your Oldest Invoices</h3>
+							</div>
+							<div class="invoice_rs">
+								<h6><a href="#">View All Invoices</a></h6>
+							</div>
+						</div>
+						<div class="accord_body">
+							<div class="in_entry">
+								<div>Invoices #</div>
+								<div>Due Date</div>
+								<div>Days in Arrears</div>
+								<div>Invoice</div>
+							</div>
+							<div class="in_entry">
+								<div><a href="#">1234567</a></div>
+								<div>06/20/2014</div>
+								<div>Due in 30 days</div>
+								<div class="sprite sprite_adobe"></div>
+								<div class="sprite sprite_mail"></div>
+							</div>
+							<div class="in_entry">
+								<div><a href="#">1234567</a></div>
+								<div>06/20/2014</div>
+								<div>5 days Past Due</div>
+								<div class="sprite sprite_adobe"></div>
+								<div class="sprite sprite_mail"></div>
+							</div>
+							<div class="in_entry">
+								<div><a href="#">1234567</a></div>
+								<div>06/20/2014</div>
+								<div>Paid in Full</div>
+								<div class="sprite sprite_adobe"></div>
+								<div class="sprite sprite_mail"></div>
+							</div>
+							<div class="in_entry">
+								<div><a href="#">1234567</a></div>
+								<div>06/20/2014</div>
+								<div>1 Day Past Due</div>
+								<div class="sprite sprite_adobe"></div>
+								<div class="sprite sprite_mail"></div>
+							</div>
+							<div class="in_entry">
+								<div><a href="#">1234567</a></div>
+								<div>06/20/2014</div>
+								<div>Due in 1 day</div>
+								<div class="sprite sprite_adobe"></div>
+								<div class="sprite sprite_mail"></div>
+							</div>
+						</div>		
+					</div>
+				</div>
+				<div class="wrap_accords">
+					<div class="accord">
+						<div class="accord_head">
+							<div class="pay_ls">
+								<div class="expand"><i class="fa fa-plus-circle fa-2x"></i></div>
+								<h3>Your Recent Payments</h3>
+							</div>
+							<div class="pay_rs">
+								<h6><a href="#">View All Account Statements</a></h6>
+							</div>
+						</div>
+						<div class="accord_body">
+							<div class="pay_entry">
+								<div>&nbsp</div>
+								<div>Last 3 Payments</div>
+								<div>Date</div>
+							</div>
+							<div class="pay_entry">
+								<div><p>Aenean soliciliudin, lorem(1234567)</p></div>
+								<div><span>12,345.67 USD</span><span>12,345.67 USD</span><span>12,345.67 USD</span></div>
+								<div><span>06/20/2014</span><span>06/20/2014</span><span>06/20/2014</span></div>
+							</div>
+							<div class="pay_entry">
+								<div><p>Aenean soliciliudin, lorem(1234567)</p></div>
+								<div><span>12,345.67 USD</span><span>12,345.67 USD</span><span>12,345.67 USD</span></div>
+								<div><span>06/20/2014</span><span>06/20/2014</span><span>06/20/2014</span></div>
+							</div>
+							<div class="pay_entry">
+								<div><p>Aenean soliciliudin, lorem(1234567)</p></div>
+								<div><span>12,345.67 USD</span><span>12,345.67 USD</span><span>12,345.67 USD</span></div>
+								<div><span>06/20/2014</span><span>06/20/2014</span><span>06/20/2014</span></div>
+							</div>
+						</div>		
+					</div>
+					<div class="accord">
+						<div class="accord_head">
+							<div class="temp_ls">
+								<div class="expand"><i class="fa fa-plus-circle fa-2x"></i></div>
+								<h3>Your Most Used templates</h3>
+							</div>
+							<div class="temp_rs">
+								<h6><a href="#">View All Templates</a></h6>
+							</div>
+						</div>
+						<div class="accord_body">
+							<div class="t_entry">
+								<div>Template</div>
+								<div>Ship-To</div>
+								<div>Seller</div>
+							</div>
+							<div class="t_entry">
+								<div><a href=""><p>Aenean solicit, lorem quis</p></a></div>
+								<div><p>Aenean solicitiduin, lorem quis bibendum,Philadelphia, USA</p></div>
+								<div><span>Celanese Ltd.</span></div>
+							</div>
+							<div class="t_entry">
+								<div><a href=""><p>Dius sed odio sit amet nibh vulpu lorem cursus</p></a></div>
+								<div><p>Aenean solicitiduin, Budapest, Hungary</p></div>
+								<div><span> Grupo Celanese, S.deRL.</span></div>
+							</div>
+							<div class="t_entry">
+								<div><a href=""><p>Aenean solicit, lorem quis</p></a></div>
+								<div><p>Aenean solicitiduin, lorem quis bibendum,Zurich, Switzerland</p></div>
+								<div><span>Celanese Ltd.</span></div>
+							</div>
+						</div>			
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<h6>Copyright 2014 Centuar Corporation</h6>
+			<ul class="footer_menu">
+				<li><a href="#">Help</a></li>
+				<li><a href="#">MSDS</a></li>
+				<li><a href="#">Terms and Conditions</a> </li>
+				<li><a href="#">Privacy Statement</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// menu list on hover
+			$('.menu_list li:eq(3)').on('click', function(e){
+				e.preventDefault();
+				$('#sub_menu').slideToggle();
+				
+			});
+			/*content submenu on hover*/
+			$('#c_menu .menu_list li:eq(2)').hover(function(){
+				$('ul#content_sub_menu').slideDown('slow');}, function(){
+				$('ul#content_sub_menu').hover(function(){
+					$('ul#content_sub_menu').show();}, function(){
+						$('ul#content_sub_menu').slideUp('fast');
+				});
+			});
+			/*accordion*/
+			$('.expand i').click(function(){
+				var x = $(this).parent().parent().parent().parent();
+				if($(this).hasClass('fa-plus-circle')){
+					$(this).removeClass("fa-plus-circle").addClass("fa-minus-circle");
+					$(this).parent().parent().parent().next().slideDown('slow');
+					x.addClass("active");
+				} else if($(this).hasClass('fa-minus-circle')){
+					$(this).removeClass("fa-minus-circle").addClass("fa-plus-circle");
+					$(this).parent().parent().parent().next().slideUp('slow');
+					x.removeClass("active");
+				}
+			return false;
+			});
+			$('#logout').on('click',function(e){
+				location.href='index.html';
+			});
+			$('#home').on('click',function(e){
+				location.href='Dashboard.html';
+			});
+			$('#admin').on('click',function(e){
+				location.href='Admin_Mgmt.html';
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+/*SASS file for Humana*/
+/*Variables*/
+$body-color: #727272;
+$body-font: Arial, Helvetica, sans-serif,"NatGroteskW00-Black";
+$header-bgcolor: #F3F3F3;
+$content-color: #846865;
+$head-color: #5D9A1A;
+$a-color:#0369B4;
+$white: #fff;
+$head-fsize: 5.1em;
+$content-fsize: 1.3em;
+$footer-bgcolor: #474641;
+/*Mixins*/
+@mixin form-element($pd, $w){
+    padding:$pd;
+    display: block;
+    width:$w;
+    border-radius:10px;
+}
+@mixin hr-footer(){
+    border: 0;
+    height: 1px;
+    box-shadow: inset 0 12px 12px -12px rgba(255, 255, 255, 0.2);
+}
+@mixin help-style($c, $fs){
+    color: $c;
+    font-size: $fs;
+}
+body {
+    color: $body-color;
+    font-family: $body-font;
+}
+.row{
+    overflow: hidden;
+}
+.container {
+    margin: 0 auto;
+    width: 980px;
+    padding: 20px 0;
+}
+.pull_right{
+    float: right !important;
+}
+.pull_left{
+    float: left !important;
+}
+p, label, span {
+    color: $content-color;
+}
+a{
+    color: $a-color;
+    text-decoration: none;
+    border-bottom: 1px $a-color dotted;
+}
+label, a.cancel, p.ack {
+    font-size: $content-fsize;
+}
+.header {
+    background-color: $header-bgcolor;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.14), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+    span{
+        &.heading {
+            font-family: "NatGroteskW00-Black";
+            @include help-style( $head-color, $head-fsize);
+        }
+        &.trademark {  @include help-style( $head-color, $content-fsize - 0.3); }
+        &.help {
+            @include help-style( #5B3F3B, $content-fsize);
+            font-weight: bold;
+        }
+        &.help, &.call { @include help-style( $content-color, $content-fsize - 0.2); }
+        &.chat {
+            font-size: $content-fsize - 0.2;
+        }
+    }
+    .help_section {
+        padding-top: 30px;
+        line-height: 30px;
+        a {
+            font-size: $content-fsize - 0.2;
+        }
+    }
+}
+.wrapper{
+    .h2 { @include help-style( $head-color, 3.5em); }
+    input{
+        margin-top:10px;
+    }
+    select{
+        margin-top: 10px;
+        @include form-element(8px, 40%);  
+    }
+    #ans{ @include form-element(8px 12px, 37%);}
+    p{
+        &.info, &.disclaimer, &.ack{
+            font-size: $content-fsize - 0.2;
+        }
+        &.ack{
+         margin-bottom:30px;
+        }
+        &.info{
+            padding: 20px 0;
+        }
+        &.disclaimer{
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
+    }
+    hr.curve {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.09));
+        box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0);
+    }
+    hr{
+        margin: 35px 0;
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+    div{
+        span.asterisk{
+            color: $head-color;
+        }
+        input{
+            border:1px solid rgba(0,0,0,0.3);
+            box-shadow: inset 0 10px 3px -8px rgba(0, 0, 0, 0.2);
+        }
+        &.blk{
+            box-sizing:border-box;
+            padding:5px 5px 5px 0;
+            width:25%;
+            float:left;
+            span.add_info{
+                font-size: $content-fsize - 0.5;
+            }
+            input{ @include form-element(8px 12px, 85%); }
+        }
+        &.agmt {
+            font-size: $content-fsize + 0.3;
+            span {
+             color: #B20055;
+             &.glyphicon-print{
+                color: $head-color;
+                }
+            }
+        }
+        &.checkbox input{
+            display: inline;
+        }
+        &.row {
+            span.print_icon a {
+                font-size: $content-fsize - 0.5;
+            }
+            button {
+                font-size: $content-fsize + 0.3;
+                padding: 10px 20px;
+                border-radius: 10px;
+                background-color: #236C37;
+                color:$white;
+            }
+        }
+        &.ans {
+            padding: 10px 0;
+        }
+        &.checkbox{
+            padding-top:20px;
+        }
+    }
+}
+footer {
+    background-color: $footer-bgcolor;
+    div.container {
+        padding-top: 0;
+    }
+    .footer_title {
+        font-family: "NatGroteskW00-Black";
+        color: $white;
+        font-size: 3em;
+        display: inline-block;
+        width:20%;
+        margin-right:2px;
+        margin-bottom:15px;
+        padding-top:10px;
+        span#tm {
+            color: $white;
+            font-size: 0.3em;
+        }
+    }
+    .footer_help {
+        background-color: #FDFDFD;
+        font-size: $content-fsize - 0.3;
+        padding: 25px 20px 20px 20px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        display: inline-block;
+        width:75.71%;
+        margin-bottom:15px;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    div.copyright {
+        @include help-style(#fefefc, $content-fsize - 0.4);
+        padding-top: 20px;
+        padding-bottom: 20px;   
+    }
+    hr {
+        margin: 0;
+    }
+    hr.trans1 {
+        @include hr-footer();
+        margin-top: 10px;
+    }
+    hr.trans2 {               
+        @include hr-footer();
+        margin-bottom: 40px;
+    }
+}
+

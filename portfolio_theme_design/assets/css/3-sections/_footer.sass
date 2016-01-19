@@ -1,0 +1,41 @@
+footer
+  background: url(../img/my_cover.jpg) center bottom
+  background-size: cover
+
+  a
+    color: white
+
+  .lockup
+    padding: 50px 30px
+    +clearfix
+
+    .logo
+      +size(50px)
+      float: left
+      margin-right: 30px
+      path
+        fill:  $accent-color
+        opacity: 0.6
+
+    .content-wrap
+      float: left
+      color: white
+
+      .copyright
+        margin: 0
+        text-transform: uppercase
+        font-size: 10px
+        color: $accent-color
+
+      a
+        @extend %small-bold
+        color: white
+        display: inline-block
+        margin-right: 30px 
+
+        &:hover
+          color: #ffd866
+
+
+
+  

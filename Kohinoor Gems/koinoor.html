@@ -1,0 +1,95 @@
+<!--
+Using PanelController to organize the written code
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+	<meta charset="UTF-8">
+	<title>Kohinoor Gems</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+	body{
+		width: 800px;
+		margin: 0 auto;
+	}
+	.nav-pills > li.active > a, .nav-pills > li.active > a:hover,
+	.nav-pills > li.active > a:focus{
+	background-color: #EC297B;
+	}
+	h1,a, a:focus {
+    color: #EC297B;
+	}
+	span,select,input[type='email'],input[type='submit'], label{
+		display: block;
+	}
+	</style>
+</head>
+<body ng-controller="StoreController as store">
+	<ul class="list-group">
+		<h1><strong>Kohinoor Gems</strong></h1>
+		<li class="list-group-item" ng-repeat="product in store.products">
+			<h3>
+				{{product.name}}
+				<em class="pull-right">{{product.price | currency}}</em>
+				<img ng-src="{{product.images[0].full}}" />
+			</h3>
+			<!---Creating a Panel Controller to organize what we created-->
+			<section ng-controller="PanelController as panel">
+				<ul class="nav nav-pills">
+					<li ng-class="{ active:panel.isSelected(1) }">
+						<a href="" ng-click="panel.selectTab(1)"> Description </a>
+					</li>
+					<li ng-class="{ active:panel.isSelected(2) }">
+						<a href="" ng-click="panel.selectTab(2)"> Specifications </a>
+					</li>
+					<li ng-class="{ active:panel.isSelected(3) }">
+						<a href="" ng-click="panel.selectTab(3)"> Reviews </a>
+					</li>
+				</ul>
+				<div class="panel" ng-show="panel.isSelected(1)">
+					<h4>Description</h4>
+					<p>{{product.description}}</p>
+				</div>
+				<div class="panel" ng-show="panel.isSelected(2)">
+					<h4>Specifications</h4>
+					<blockquote>
+						<p>Shine: {{product.shine}}</p>
+						<p>Rarity: {{product.rarity}}</p>
+					</blockquote>
+				</div>
+				<div class="panel" ng-show="panel.isSelected(3)">
+					<h4>Reviews</h4>
+						<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+							<blockquote ng-repeat="review in product.reviews">
+							<b>{{reviewCtrl.review.stars}} Stars</b>
+								<span>{{reviewCtrl.review.body}}</span>
+								<cite>-{{reviewCtrl.review.author}}</cite>
+							</blockquote>
+							<!--using ng-model to bind the form element value to the property-->
+							<select ng-model="reviewCtrl.review.stars">
+								<option value="1">1 star</option>
+								<option value="2">2 star</option>
+								<option value="3">3 star</option>
+								<option value="4">4 star</option>
+								<option value="5">5 star</option>
+							</select>
+							<textarea name="body" ng-model="reviewCtrl.review.body" placeholder="Please type some comments"></textarea>
+							<label>by:</label>
+							<input name="author" ng-model="reviewCtrl.review.author" type="email" placeholder="Type in your email"/>
+							<input type="submit" value="Submit" />
+						</form>
+						<!--
+							<input ng-model=".reviewCtrl.review.terms" type="checkbox" />I agree to the terms
+							<label>What color would you like?</label>
+							<input ng-model="reviewCtrl.review.color" type="radio" value="red"/>Red
+							<input ng-model="reviewCtrl.review.color" type="radio" value="blue" />Blue
+							<input ng-model="reviewCtrl.review.color" type="radio" value="green" />Green -->
+						
+				</div>
+			</section>
+		</li>
+	</ul>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app2_1.js"></script>
+</body>
+</html>

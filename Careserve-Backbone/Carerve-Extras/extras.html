@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>ReserveCar Extra's Page</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/sprites.css">
+</head>
+<body>
+	<div class="container">
+		<div class="extras">
+			<div class="submit">
+				<button class="submit_btn">
+					Submit
+				</button>
+			</div>
+			<section class="extras_container">
+				
+			</section>
+			<div class="submit">
+				<button class="submit_btn">
+					Submit
+				</button>
+			</div>
+		</div>
+		<div class="sidebar">
+			<section class="itinerary">
+				<div class="itinerary_title"><h5>Your Itinerary</h5><span><a href="#">Edit</a></span></div>
+				<div class="itinerary_details">
+					
+				</div>
+			</section>
+			<section class="car_info">
+				<div class="car_title"><h5>Your Car</h5><span><a href="#">Edit</a></span></div>
+				<div class="car_details">
+					
+				</div>
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript" src="libs/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="libs/underscore-min.js"></script>
+	<script type="text/javascript" src="libs/backbone-min.js"></script>
+	<script type="text/javascript" src="extrasjson.js"></script>
+	<script type="text/javascript" src="scripts/page_router.js"></script>
+	<script type="text/javascript" src="scripts/page_presenter.js"></script>
+	<script type="text/javascript" src="scripts/page_view.js"></script>
+	<script type="text/javascript" src="scripts/page_model.js"></script>
+	<script type="text/javascript" src="scripts/categories_model.js"></script>
+	<script type="text/javascript" src="scripts/categories_view.js"></script>
+	<script type="text/javascript" src="scripts/category_view.js"></script>
+	<script type="text/javascript" src="scripts/extras_list_model.js"></script>
+	<script type="text/javascript" src="scripts/extras_list_view.js"></script>
+	<script type="text/javascript" src="scripts/extras_model.js"></script>
+	<script type="text/javascript" src="scripts/extras_view.js"></script>
+	<script type="text/javascript" src="scripts/itinerary_model.js"></script>
+	<script type="text/javascript" src="scripts/itinerary_view.js"></script>
+	<script type="text/javascript" src="scripts/carRate_model.js"></script>
+	<script type="text/javascript" src="scripts/carRate_view.js"></script>
+	<script type="text/template" id="category-template">
+		<div class="category">
+			<div class="category_title">
+				<h3><%=categories.name%></h3>
+			</div>
+			<div class="category_extras">
+				<div class="title">
+					<div class="add">
+						<h6>Add</h6>
+					</div>
+					<div class="img">
+						<h6>&nbsp</h6>
+					</div>
+					<div class="desc">
+						<h6>Item Description</h6>
+					</div>
+					<div class="quantity">
+						<%if((categories.type) != 0){%>
+							<h6>Quantity/Type</h6>
+						<%} else {%>
+							<h6>&nbsp</h6>	
+						<%}%>
+					</div>
+					<div class="price">
+						<h6>Price</h6>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</script>
+	<script type="text/template" id="extras-template">	
+		
+		<div class="data">
+			<div class="add">
+				<input type="checkbox"/>
+			</div>
+			<div class="img">
+				<img src="<%=extras.img%>"/>
+			</div>
+			<div class="desc">
+				<h5><%=extras.name%></h5>
+				<p><%=extras.text%></p>
+				<p><a href="#">More Details</a></p>
+			</div>
+			<%if(extras.options){%>
+				<div class="quantity">
+					<select id="selector">
+					  <% _(extras.options).each(function(option) { %>
+					    <option value="<%= option.name %>"><%= option.value %></option>
+					  <% }); %>		
+					</select>
+				</div>
+			<%}%>
+			<div class="price">
+				<p class="value">
+					<%if(extras.price){%>
+						<%=extras.price%>
+					<%}%>
+				</p>
+				<p><%=extras.rate %></p>
+			</div>
+		</div>	
+	</script>
+	<script type="text/template" id="itinerary-template">	
+		<div class="itinerary_pickup">
+			<h6>PickUp Time</h6>
+			<p><%=itinerary.pickupDate%></p>
+			<h6>Return Time</h6>
+			<p><%=itinerary.dropoffDate%></p>
+		</div>	
+		<div class="itinerary_location">
+			<h6>PickUp and Return Location</h6>
+			<p><%=itinerary.pickupLocation.name%></p>
+			<p><a href="#">view details</a></p>
+		</div>
+		<div class="itinerary_discount">
+			<h6>Discounts</h6>
+			<p><%=itinerary.discounts%></p>
+			<h6>Arrival/Flight Information</h6>
+			<p><%=itinerary.arrivalInfo.desc%></p>
+			
+		</div>
+		<div class="itinerary_age">
+			<h6>Your Age</h6>
+			<p><%=itinerary.age%></p>
+		</div>	
+	</script>
+	<script type="text/template" id="car-template">	
+		<div class="car_wrapper">
+		<div class="car_info">
+			<img src="<%=rateDetails.vehInfo.img%>"/>
+			<p><%=rateDetails.vehInfo.carTypeDisplay%> (Group <%=rateDetails.vehInfo.carGroup%>) <%=rateDetails.vehInfo.sipp%></p>
+			<h6><%=rateDetails.vehInfo.name%></h6>
+			<p><a href="#">More Details</a></p>
+		</div>
+		<div class="rate_details">
+			<p><strong>Payment Method</strong> <%=rateDetails.paymentMethod%></p>
+			<p><strong>Rate Details</strong></p>
+			<%if(rateDetails.baseRates){%>
+			  	<% _(rateDetails.baseRates).each(function(baseRate) { %>
+					<div class="baseRate">
+						<p><%=baseRate.quantity%> <%=baseRate.duration%> <%=baseRate.unitRate%> <%=baseRate.currency%></p>
+						<p><%=baseRate.total%> <%=baseRate.currency%></p>
+					</div>
+			  	<% }); %>		
+			<%}%>
+			<%if(rateDetails.manRates){%>
+			  	<% _(rateDetails.manRates).each(function(manRate) { %>
+					<div class="manRate">
+						<p><span class="info_sm"></span><span><%=manRate.name%></span></p>
+						<p><%=manRate.total%> <%=manRate.currency%></p>
+					</div>
+			  	<% }); %>		
+			<%}%>
+			<p style="clear: both;"><strong>Included</strong></p>
+			<p><%=rateDetails.milesNote1%></p>
+			<div>
+				<p><strong>Vehicle Subtotal</strong></p>
+				<p><strong><%=rateDetails.vehicleSubtotal%> <%=rateDetails.currency%></strong></p>
+			</div>
+			<div>
+				<p><strong><%=rateDetails.taxLabel%></strong></p>
+				<p><strong><%=rateDetails.tax%> <%=rateDetails.currency%></strong></p>
+			</div>
+		</div>
+		</div>
+		<div class="selected_extras">
+			<div class="extras_rate">
+				<p><strong>Extras</strong></p>
+			</div>
+			<div class="add_extras">
+
+			</div>
+		</div>
+		<div class="total_rate">
+			<p><strong>Total</strong></p>
+			<p><strong><%=rateDetails.approxTotal%></strong></p>
+		</div>	
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var routerObj = new pageRouter();
+			Backbone.history.start();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!--1. Implement an Employee contacts list as specified in assignment.png by using Handlebars templating engine.
+2. Employee Details (Name, Designation, DOB, Email, Mobile, Location and Image) should be displayed.
+3. Use the provided JSON data (json.txt)
+4. If the json data does not contains an image property, display a default image. Default image should be gender specific. Use the default images provided.
+5. For displaying name, join the firstname and lastname and display as a single name (use the benefit of registerHelper in Handlebars)
+6. For DOB, Email, Mobile and location, if any data is not present in the json display a default message like "Data not found".
+7. HTML tag for the name should be configerable (use the benefit of registerPartial in Handlebars)-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Template Assignment</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/show_all.css">
+	<link rel="stylesheet" href="css/font-awesome-4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+	<script id="employee-template" type="text/x-handlebars-template"> 
+		<div class="container">
+			<div class="row">
+				<h1>Employee Contact Information </h1>
+			</div>
+			<div class="row">
+				{{#empDetails}}
+				<div class="col-sm-4 col-md-4">
+					<article class="employee">
+						<div class="employee_info">
+							<div class="employee_photo pull-left">
+								{{#if photo}}
+						            <img class="img-rounded" width="100%" height="100%" src="{{photo}}" alt="employee_photo"/>
+					            {{else}}
+					            	{{#ifCond gender "male"}}
+					                <img class="img-rounded" width="100%" height="100%" src="images/male.jpg" alt="employee_photo"/>
+					                {{else}}
+					                <img class="img-rounded" width="100%" height="100%" src="images/female.jpg" alt="employee_photo"/>
+					                {{/ifCond}}      
+					            {{/if}}
+								
+							</div>
+							<div class="emp-name pull-left">
+								{{> employeeName tagName="h3"}}
+								<h4>{{designation}}</h4>
+							</div>
+						</div>
+						<div class="employee_details">
+							<div class="col-md-3">
+					                   
+								<p><strong>DOB:</strong></p>
+								<p><strong>Email:</strong></p>
+								<p><strong>Mobile:</strong></p>
+								<p><strong>Location:</strong></p>
+							</div>
+							<div class="col-md-8">
+								{{#if DOB}}
+						            <p>{{DOB}}</p>
+					            {{else}}
+					            	<p>Data not found</p>     
+					            {{/if}}
+								{{#if email}}
+						            <p>{{email}}</p>
+					            {{else}}
+					                <p>Data not found</p>        
+					            {{/if}}
+
+								{{#if mobile}}
+						            <p>{{mobile}}</p>
+					            {{else}}
+					                <p>Data not found</p>        
+					            {{/if}}
+					            {{#if location}}
+						            <p>{{location}}</p>
+					            {{else}}
+					                <p>Data not found</p>        
+					            {{/if}}
+								
+							</div>
+						</div>
+						
+					</article>
+				</div>
+				{{/empDetails}}
+			</div>
+		</div>
+	</script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	var source = $("#employee-template").html(); 
+	var template = Handlebars.compile(source); 
+	var data = {
+		empDetails : [
+		{
+			name : {
+				firstname: "John",
+				lastname: "Smith"
+			},
+			DOB: "12/12/1990",
+			gender: "male",
+			designation: "Senior software engineer",
+			mobile: "1234567890",
+			email: "johns@techaspect.com",
+			location: "USA",
+			photo: "http://www.dawberphoto.co.uk/wp-content/uploads/2014/04/passport-studio-child.jpg"
+		},
+		{
+			name : {
+				firstname: "John",
+				lastname: "Doe"
+			},
+			DOB: "12/11/1990",
+			gender: "male",
+			designation: "Senior software engineer",
+			mobile: "1234567890",
+			email: "johnd@techaspect.com",
+			location: "USA"
+		},
+		{
+			name : {
+				firstname: "Kate",
+				lastname: "Mill"
+			},
+			DOB: "12/10/1990",
+			gender: "female",
+			designation: "Senior software engineer",
+			mobile: "1234567890",
+			email: "katem@techaspect.com",
+			location: "USA"
+		},
+		{
+			name : {
+				firstname: "John",
+				lastname: "Smith"
+			},
+			DOB: "12/12/1990",
+			gender: "male",
+			designation: "Senior software engineer",
+			mobile: "1234567890",
+			location: "USA",
+			photo: "http://www.dawberphoto.co.uk/wp-content/uploads/2014/04/passport-studio-child.jpg"
+		},
+		{
+			name : {
+				firstname: "John",
+				lastname: "Smith"
+			},
+			DOB: "12/12/1990",
+			gender: "male",
+			designation: "Senior software engineer",
+			email: "johns@techaspect.com",
+			location: "USA",
+			photo: "http://www.dawberphoto.co.uk/wp-content/uploads/2014/04/passport-studio-child.jpg"
+		},
+		{
+			name : {
+				firstname: "John",
+				lastname: "Smith"
+			},
+			DOB: "12/12/1990",
+			gender: "male",
+			designation: "Senior software engineer",
+			mobile: "1234567890",
+			email: "johns@techaspect.com",
+			location: "USA",
+			photo: "http://www.dawberphoto.co.uk/wp-content/uploads/2014/04/passport-studio-child.jpg"
+		},
+		{
+			name : {
+				firstname: "John",
+				lastname: "Smith"
+			},
+			DOB: "12/12/1990",
+			gender: "male",
+			designation: "Senior software engineer",
+			mobile: "1234567890",
+			email: "johns@techaspect.com",
+			location: "USA",
+			photo: "http://www.dawberphoto.co.uk/wp-content/uploads/2014/04/passport-studio-child.jpg"
+		},
+		{
+			name : {
+				firstname: "John",
+				lastname: "Smith"
+			},
+			DOB: "12/12/1990",
+			gender: "male",
+			designation: "Senior software engineer",
+			mobile: "1234567890",
+			email: "johns@techaspect.com",
+			location: "USA",
+			photo: "http://www.dawberphoto.co.uk/wp-content/uploads/2014/04/passport-studio-child.jpg"
+		},
+		{
+			name : {
+				firstname: "John",
+				lastname: "Smith"
+			},
+			DOB: "12/12/1990",
+			gender: "male",
+			designation: "Senior software engineer",
+			mobile: "1234567890",
+			email: "johns@techaspect.com",
+			location: "USA",
+			photo: "http://www.dawberphoto.co.uk/wp-content/uploads/2014/04/passport-studio-child.jpg"
+		},
+		{
+			name : {
+				firstname: "John",
+				lastname: "Smith"
+			},
+			DOB: "12/12/1990",
+			gender: "male",
+			designation: "Senior software engineer",
+			mobile: "1234567890",
+			email: "johns@techaspect.com",
+			location: "USA",
+			photo: "http://www.dawberphoto.co.uk/wp-content/uploads/2014/04/passport-studio-child.jpg"
+		}
+	]
+};
+	Handlebars.registerHelper('fullName', function(name) {
+  		return name.firstname + " " + name.lastname;
+	});
+	Handlebars.registerHelper('ifCond', function(v1, v2, options) {
+	  if(v1 === v2) {
+	    return options.fn(this);
+	  }
+	  return options.inverse(this);
+	});
+	Handlebars.registerPartial('employeeName', '<{{tagName}}><strong>{{fullName name}}</strong></{{tagName}}>');
+	$('body').append(template(data));
+
+	});
+</script>
+</body>
+</html>

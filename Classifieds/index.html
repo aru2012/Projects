@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classifieds</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="style/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="logo"><img src="images/logo.png" al="logo"></div>
+		<div class="account-nav">
+			<div class="empty">				
+			</div>
+			<div class="r-nav">
+			</div>
+				
+		</div>
+	</header>
+	<section class="content">
+	</section>
+	<footer>
+		<span>&copy 2015 TechAspect Solutions Inc.</span>
+	</footer>
+	<script type="text/template" id="header-tpl">
+		<nav>
+		<%if(isLoggedIn){%>
+			<span class="user-name"></span>
+			<span><a class="logout">Logout</a></span>
+		<%}else{%>
+			<span class="user-login"><a href="#login">Login</a></span>
+			<span class="sign-in"><a href="#signup">SignUp</a></span>
+		<%}%>
+		</nav>
+	</script>
+	<script type="text/template" id="home-tpl">
+		<article class="about">
+			<div class="heading">About Us</div>
+			<p>
+				Techaspect Classified offers free local classifieds ads where buyers meet sellers. Search and post classified ads in for Sale, Electronics, Vehicles etc. It provides simple solution to the complications involved in buying and selling used goods. And it also provides chance to share information about company wide meetings, invitations, Activities.  
+			</p>
+		</article>
+		<article class="classify">
+			<div class="heading">Latest Classifieds</div>
+			<ul class="classified">
+				<% _.each(homepageData, function(data, index){%>
+					<li><strong><%=data.get("classifiedCategory")%></strong> - <%=data.get("classifiedHeading")%> <small>by <%=data.get("empemail") %></small>
+					</li>
+				<%}) %>	
+			</ul>
+			<div><a href="#all">View All Classifieds</a></div>
+		</article>
+	</script>
+	<script type="text/template" id="classified-tpl">
+		<div class="links">
+		<nav ><a href="">Home</a><a href="#classifieds">My Classifieds</a><a href="#all">All Classifieds</a><a href="#postclassified">Post a Classified</a></nav>
+		</div>
+		<div class="myclassified">
+			<div class="heading">My Classifieds</div>
+			<div class="all-classified">
+				<% _.each(myclassifiedData, function(data, index){%>
+					<div class="classifieds"><strong><%=data.get("classifiedCategory")%></strong> 
+					 <span class="class-heading"><%=data.get("classifiedHeading")%></span>
+					</div>
+				<%}) %>	
+			</div>
+		</div>
+	</script>
+	<script type="text/template" id="all-classified-tpl">
+		<div class="links">
+		<nav ><a href="">Home</a><a href="#classifieds">My Classifieds</a><a href="#all">All Classifieds</a><a href="#postclassified">Post a Classified</a></nav>
+		</div>
+		<div>
+			<select>
+				<option value="all">All Categories</option>
+				<option value="electronics">Electronics</option>
+				<option value="footwear">Footwear</option>
+				<option value="clothing">Clothing</option>
+				<option value="others">Others</option>
+			</select>
+		</div>
+		<div class="all-classified">
+			<% _.each(allClassifiedData, function(data, index){%>
+				<div class="classifieds"><strong><%=data.get("classifiedCategory")%></strong> 
+				 <span class="class-heading"><%=data.get("classifiedHeading")%></span> <span><small>by <%=data.get("empemail") %></small></span>
+				</div>
+			<%}) %>	
+		</div>
+	</script>
+	<script type="text/template" id="login-tpl">
+		<div class="login">
+			<div id="errors-list"><p class="invalid"><p></div>
+			<form id="loginForm">
+				<input type="text" class="username" placeholder="username"><br><br>
+				<input type="password" class="password" placeholder="password"><br><br>
+				<button id="lg-submit">Submit</button>
+			</form><br>
+			<a href="#">Forgot my password</a>
+
+		</div>
+	</script>
+	<script type="text/template" id="signup-tpl">
+		<div class="signup">
+			<div id="errors-list"></div>
+			<form id="signupForm">
+				<label>Employee Name</label>
+				<input type="text" name="username" placeholder="Employee Name"><br><br>
+				<label>Employee Id</label>
+				<input type="text" name="employeeId" placeholder="Employee ID"><br><br>
+				<label>Email ID</label>
+				<input type="email" name="emailId" placeholder="EmailID"><br><br>
+				<label>Password</label>
+				<input type="password" name="password" placeholder="Password"><br><br>
+				<button id="su-submit">SignUp</button>
+			</form><br>
+
+		</div>
+	</script>
+	<script type="text/template" id="post-classified-tpl">
+		<div class="links">
+		<nav><a href="">Home</a><a href="#classifieds">My Classifieds</a><a href="#all">All Classifieds</a><a href="#postclassified">Post a Classified</a></nav>
+		</div>
+		<div class="post">
+			<div id="errors-list"></div>
+			<form id="postForm">
+				<label>Classified Heading</label>
+				<input type="text"><br><br>
+				<label>Category</label>
+				<input type="text"><br><br>
+				<label>Specification/ Description</label><br>
+				<textarea cols="30" rows="8"></textarea><br><br>
+				<label>Price</label>
+				<input type="text"><br><br>
+				<button id="submit-classified">Post</button>
+			</form><br>
+		</div>
+	</script>
+	<script type="text/javascript" data-main="js/config" src="js/libs/require.js"></script>
+</body>
+</html>

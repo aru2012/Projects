@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Emlpoyee Database</title>
+	<meta charset="UTF-8"/>
+	<style type="text/css">
+	body{
+		margin: 0 auto;
+		width: 1024px;
+	}
+	form div{
+		margin-bottom: 10px;
+	}
+	form div div{
+		display: inline-block;
+	}
+	form div .form-labels{
+		width:5%;
+	}
+	form div div:first-child{
+		padding-right: 50px;
+	}
+	form #showList{
+		
+	}
+	.highlight{
+		background-color: red;
+	}
+	.error_msg{
+	float: right;
+	color:red;
+	font-size: 12px;
+	margin-left: 0px;
+	}
+	table, tr, thead, td{
+		border:1px solid rgba(0,0,0,0.2);
+	}
+	table tr th, table tr td{
+		width: 20%;
+		text-align: left;
+	}
+	table{
+		margin-top: 20px;
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<h2>Employee Database</h2>
+	
+	<form id="employee-form">
+		<div class="control-group">
+			<div class="form-labels"><label>Name:</label></div>
+			<div class="form-inputs"><input type="text" id="name" placeholder="Enter name"/></div>
+			<span class="help-inline"></span>
+		</div>
+		<div class="control-group">
+			<div class="form-labels"><label>Email:</label></div>
+			<div class="form-inputs"><input type="email" id="email" placeholder="Enter email-Id"/></div>
+			<span class="help-inline"></span>
+		</div>
+		<div class="control-group">
+			<div class="form-labels"><label>Location:</label></div>
+			<div class="form-inputs"><select id="location"><option value="select">Select a Location</option><option value="sanfrancisco">San Francisco</option><option value="boston">Boston</option><option value="newyork">New York</option></select><span class="err"></span></div>
+			<span class="help-inline"></span>
+		</div>
+		<input type="submit" value="Submit" id="submit"/>
+		<a href="" id="showList">View List</a>
+
+		<div class="employee-table">
+			<table id="tableData">	
+				
+			</table>
+		</div>
+	</form>
+	<script type="text/javascript" src="libs/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
+</body>
+</html>

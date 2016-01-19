@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Admin Management</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/centuar_global.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="css/admin.css">
+	<link rel="stylesheet" href="css/font-awesome-4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/metallic.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="centuar-logo">
+				<h3>Centuar</h3><span>The perfect solution for your demands.</span>
+			</div>
+			<div id="menu">
+				<ul class="menu_list">
+					
+					<li><div class="tab">WEBSHOP</div><div class="arrows"><i class="fa fa-caret-down fa-lg"></i></div></li>
+					<li id="customer"><div class="tab">CUSTOMER</div></li>
+					<li>
+						<div class="tab">COLLEGE KREBS</div><div class="arrows"><i class="fa fa-caret-down fa-lg"></i></div>
+							<ul id="sub_menu" class="shadow">
+								<li><a href="#">YOUR PROFILE</a></li>
+								<li><a href="#">CUSTOMER/SHIP-TO LIST</a></li>
+								<li><a href="#">PASSWORD CHANGE</a></li>
+								<li><a href="#">ACCOUNT PREFERENCES</a></li>
+								<li><a href="#">YOUR TEMPLATE</a></li>
+							</ul>
+					</li>
+					<li><div class="tab" id="logout">LOG OUT</div></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="heading">
+				<h1>My Centuar <span class="login_text">Admin</span></h1>
+				<div class="search_wrapper">
+					<div class="search">
+					<input type="text" placeholder="Quick Search"/>
+					<select><option value="#Type">#Type</option>
+					<option value="1">Option1</option>
+					<option value="2">Option2</option>
+					</select>
+					<i class="fa fa-caret-down fa-lg" id="down_icon"></i></div>
+					<button id="search_button">Search</button>
+				</div>
+				
+			</div>		
+			<div class= "content_menu">
+				<div id="c_menu">
+				<ul class="menu_list">
+					<li><div class="tab">CREATE NEW USER</div></li>
+					<li><div class="tab">MAINTAIN USER</div></li>
+					<li><div class="tab">SETTINGS</div></li>
+				</ul>
+				</div>	
+			</div>
+			<div id="login_mgmt">
+				<h2>LOGIN MANAGEMENT</h2>
+				<div class="login_param">
+					<h3>Login Prameters</h3>
+					<form>	
+						<div id="l1">
+							<div class="fields">
+								<div>
+									<label>
+										Number of attempts user can login before account locks
+									</label>
+								</div>	
+								<div>
+									<input type="text"/>
+								</div>
+							</div>
+							<div class="fields">
+								<div>
+									<label>
+										Session time-out(Minutes)
+									</label>
+								</div>
+								<div>
+									<input type="text"/>
+								</div>
+								<div class="btn">
+									<button class="save">SAVE</button>
+								</div>
+							</div>
+						</div>
+					</form>	
+				</div>
+				<div class="user_lockout">
+					<h3>User ID Lockout</h3>
+					<form>	
+						<div id="l1">
+							<div class="fields">
+								<div>
+									<label>
+										Number of days since the last login
+									</label>
+								</div>	
+								<div>
+									<input type="text"/>
+								</div>
+							</div>
+							<div class="fields">
+								<div>
+									<label>
+										Scheduler for lock-out job run (Days)
+									</label>
+								</div>	
+								<div>
+									<input type="text"/>
+								</div>
+							</div>
+							<div class="fields">
+								<div><h6>Send Lock-out Notification</h6></div>
+								<div>&nbsp</div>
+							</div>
+							<div class="fields">
+								<div>
+									<label>
+										Number of days prior
+									</label>
+								</div>	
+								<div>
+									<input type="text"/>
+								</div>
+							</div>
+							<div class="fields">
+								<div>
+									<label>
+										Number of times with frequency
+									</label>
+								</div>
+								<div>
+									<input type="text"/>
+								</div>
+								<div class="btn">
+									<button class="save">SAVE</button>
+								</div>
+							</div>
+						</div>
+					</form>					
+				</div>
+				<div class="login_msg">
+					<h3>Login Page Message</h3>
+					<form name="login_form" id="login_form">	
+						<div id="l1">
+							<div class="fields">
+								<div>
+									<label>
+										Message
+									</label>
+								</div>	
+								<div>
+									<textarea rows="7" cols="50" id="text_data1"></textarea>
+								</div>
+							</div>
+							<div class="fields">
+								<div>
+									<label>
+										Message Time Period
+									</label>
+								</div>
+								<div class="date">
+									<input type="text" class="date_picker_from1" placeholder="From" id="from1"/><i class="fa fa-calendar fa-lg"></i>
+								</div>
+								<div class="date">
+									<input type="text" class="date_picker_to1" placeholder="To" id="to1"/><i class="fa fa-calendar fa-lg"></i>
+								</div>
+								<div class="btn">
+									<button id="login_add">ADD</button>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="fields">
+						 <div  class="msg_accordion">
+							<div class="msg_tab">
+								<div class="admin_expand_icon"><i class="fa fa-plus-circle fa-lg " class="expand_section"></i></div><h4>Login Page Message </h4><div class="admin_delete_icon"><i class="fa fa-trash-o fa-lg"></i></div>
+							</div>
+							<div class="display_details hidden">
+								<ul class="msg_info">
+									<li><h4>Message&nbsp</h4>
+									<p><span id="p0"></span></p></li>
+									<li><h4>Message Time-Period&nbsp</h4>
+									<p><span id="p1"></span>&nbsp to &nbsp<span id="p2"></span></p></li>
+									<li><i class="fa fa-pencil-square-o"></i>&nbsp<a href="#" >Edit Message</a></li>
+								</ul>
+							</div>
+						 </div>
+					</div>	
+				</div>
+				<div class="user_msg">
+					<h3>User Message</h3>
+					<form name="user_form" id="user_form">	
+						<div id="l1">
+							<div class="fields">
+								<div>
+									<label>
+										Sales Org
+									</label>
+								</div>	
+								<div>
+									<select id="chosen"><option>Select a Sales Org</option>
+									<option value="1">Sales Org1</option>
+									<option value="2">Sales Org2</option></select>
+								</div>
+							</div>
+							<div class="fields">
+								<div>
+									<label for="text_data">
+										Message
+									</label>
+								</div>	
+								<div>
+									<textarea rows="7" cols="50" id="text_data2"></textarea>
+								</div>
+							</div>
+							<div class="fields">
+								<div>
+									<label>
+										Message Time Period
+									</label>
+								</div>
+								<div class="date">
+									<input type="text" class="date_picker_from2" placeholder="From" id="from2"/><i class="fa fa-calendar fa-lg"></i>
+								</div>
+								<div class="date">
+									<input type="text" class="date_picker_to2" placeholder="To" id="to2"/><i class="fa fa-calendar fa-lg"></i>
+								</div>
+								<div class="btn">
+									<button id="sales_add">ADD</button>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="fields">
+						 <div  class="msg_accordion">
+								<div class="msg_tab">
+									<div class="admin_expand_icon"><i class="fa fa-plus-circle fa-lg"></i></div><h4>User Message </h4><div class="admin_delete_icon"><i class="fa fa-trash-o fa-lg"></i></div>
+								</div>
+								<div class="display_details hidden">
+									<ul class="msg_info">
+										<li><h4>Sales &nbsp</h4>
+										<p ><span id="p3"></span></p></li>
+										<li><h4>Message&nbsp</h4>
+										<p><span  id="p4"></span></p></li>
+										<li><h4>Message Time-Period &nbsp</h4>
+										<p><span id="p5"></span>&nbsp to &nbsp<span id="p6"></span></p></li>
+										<li><i class="fa fa-pencil-square-o"></i>&nbsp<a href="#">Edit Message</a></li>
+									</ul>
+								</div>
+						 </div>
+					</div>	
+					
+				</div>	
+			</div>	
+		</div>
+		<div class="footer">
+			<h6>Copyright 2014 Centuar Corporation</h6>
+			<ul class="footer_menu">
+				<li><a href="#">Help</a></li>
+				<li><a href="#">MSDS</a></li>
+				<li><a href="#">Terms and Conditions</a> </li>
+				<li><a href="#">Privacy Statement</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/zebra_datepicker.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// menu list on hover
+			$('.menu_list li:eq(2)').on('click', function(e){
+				e.preventDefault();
+				$('#sub_menu').slideToggle();
+				
+			});
+			$('#logout').on('click',function(e){
+				location.href='index.html';
+			});
+			$('#customer').on('click',function(e){
+				location.href='Dashboard.html';
+			});
+			/*Accordion*/
+			$('.admin_expand_icon i').click(function(){
+					if($(this).hasClass('fa-plus-circle')){
+						$(this).removeClass("fa-plus-circle").addClass("fa-minus-circle");
+						$(this).parent().parent().next().slideDown('slow');
+					}
+					else if($(this).hasClass('fa-minus-circle')){
+						$(this).removeClass("fa-minus-circle").addClass("fa-plus-circle");
+						$(this).parent().parent().next().slideUp('slow');
+					}
+					
+				return false;
+			});
+		/*Form Validation and display*/
+			$('#sales_add').on('click',function(e){
+				e.preventDefault();
+				var msg = $('#text_data2').val();
+				var chosen = $('#chosen :selected').text();
+				var date_from2 =$('#from2').val();
+				var date_to2 =$('#to2').val();
+				$('#p3').append(chosen);
+				$('#p4').append(msg);
+				$('#p5').append(date_from2);
+				$('#p6').append(date_to2);
+			
+			});
+			$('#login_add').on('click',function(e){
+				e.preventDefault();
+				var msg1 = $('#text_data1').val();
+				var date_from1 =$('#from1').val();
+				var date_to1 =$('#to1').val();
+				$('#p0').append(msg1);
+				$('#p1').append(date_from1);
+				$('#p2').append(date_to1);
+			
+			});
+			$('.save').on('click',function(e){
+				e.preventDefault();
+			});
+			/*Delete Content*/
+			$('.fields i.fa-trash-o').click(function(){
+				var x = $(this).parent().parent().next();
+				x.find('span').empty();
+			});
+			
+			/*Calendar Jquery*/
+			$('input.date_picker_from1').Zebra_DatePicker({
+				pair: $('input.date_picker_to1')
+			});
+			$('input.date_picker_to1').Zebra_DatePicker();
+			$('input.date_picker_from2').Zebra_DatePicker({
+				pair: $('input.date_picker_to2')
+			});
+			$('input.date_picker_to2').Zebra_DatePicker({
+				direction:1
+			});
+
+ 	 	});
+	</script>
+</body>
+</html>

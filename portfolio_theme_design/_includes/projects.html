@@ -1,0 +1,51 @@
+
+<section class="section-projects">
+
+  <h3 id="project">PROJECTS</h3>
+  {% for project in site.data.settings.projects %}
+    <input type="radio" name="trigger" class="trigger" id="{{ project.folder }}" />
+  {% endfor %}
+
+  <input type="radio" name="trigger" id="return" class="return" />
+
+  <div class="project-belt">
+
+    <div class="thumb-wrap">
+      <div class="thumb-container">
+      {% for project in site.data.settings.projects %}
+      <label for="{{ project.folder }}">
+        <div class="thumb-unit" data-folder="{{ project.folder }}">
+          <img src="assets/img/work/{{project.folder}}/thumb.jpg" alt="{{ project.name }}" />
+        </div>
+        <div class="thumb-overlay">
+          <strong><a>{{ project.name }}</a></strong>
+        </div>
+      </label>
+      {% endfor %}
+    </div>
+    </div>
+
+    <div class="project-wrap">
+      <div class="project-container">
+      <label for="return">
+        <div class="project-return">{% include icons/icon-back.html %}</div>
+      </label>
+      <h4 class="project-title"></h4>
+      <div class="project-load"></div>
+
+      <noscript>
+        {% for project in site.data.settings.projects %}
+          <div class="noscript" id="content-{{ project.folder }}">
+            <h4 class="project-title">{{ project.name }}</h4>
+            <div class="noscript-load">
+              {% include {{project.file}} %}
+            </div>
+          </div>
+        {% endfor %}
+      </noscript>
+
+    </div>
+    </div>
+
+  </div>
+</section>

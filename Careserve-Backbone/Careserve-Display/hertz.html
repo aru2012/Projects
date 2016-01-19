@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Hertz Vehicle Page</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="css/sprites.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header_results">
+			<div class="display_all"><h3>Showing All Vehicle Results</h3></div>
+			<div class="show_results">
+				<span><strong>Sort Vehicle By: </strong><span id="filter"><a id="sort_price">Price</a> | <a id="sort_size">Size</a></span></span>
+				<span class="result_range">Results 1 - 10 <a id="show_all_vehicles">Display all (47)</a></span>
+				<span id="show_ten_vehicles"><a href="hertz.html" >Display(10) vehicles</a></span>
+			</div>
+		</div>
+		<div>
+			<p>The rates listed represent the best available rates based on the information provided.</p>
+		</div>
+		<div class="vehicles_container">
+	
+		</div>
+	</div>
+	<script type="text/javascript" src="libs/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="libs/underscore-min.js"></script>
+	<script type="text/javascript" src="libs/backbone-min.js"></script>
+	<script type="text/javascript" src="vehicleJSON.js"></script>
+	<script type="text/javascript" src="scripts/vehicle_router.js"></script>
+	<script type="text/javascript" src="scripts/vehicle_presenter.js"></script>
+	<script type="text/javascript" src="scripts/quote_view.js"></script>
+	<script type="text/javascript" src="scripts/page_view.js"></script>
+	<script type="text/javascript" src="scripts/page_model.js"></script>
+	<script type="text/javascript" src="scripts/vehicle_view.js"></script>
+	<script type="text/javascript" src="scripts/quote_model.js"></script>
+	<script type="text/javascript" src="scripts/vehicle_list_view.js"></script>
+	<script type="text/javascript" src="scripts/vehicle_model.js"></script>
+
+	<script type="text/template" id="vehicle-template">
+		<div class="vehicle">
+			<div class="car_title">
+				<h3><%=vehicle.carTypeDisplay%> (Group <%=vehicle.carGroup%>)</h3><span><%=vehicle.sipp%></span>
+			</div>
+			<div class="car_content">
+				<div class="car_image">
+					<img src="images/<%=vehicle.img%>" />
+				</div>
+				<div class="car_details">
+					<div class="car_name">
+						<h4><%= vehicle.name %>
+						
+						</h4>
+						<span>
+							<a href="#">or similar</a>
+						</span>
+						<span class="info_sm"></span>
+					</div>
+					<div class="car_features">
+						<label>
+							<% if(vehicle.passengers){%>
+								<span class="gray_people"></span>
+							<%} %>
+							
+							<%= vehicle.passengers%>
+						</label>
+						<label>
+							<% if(vehicle.luggage){%>
+								<span class="gray_suitcase"></span>
+							<%} %>
+							
+							<%= vehicle.luggage%>
+						</label>
+						<label>
+							<% if(vehicle.transmission){%>
+								<span class="transmission-automatic-icon"></span>
+							<%} %>
+							<%= vehicle.transmission%>
+						</label>
+						<label>
+							<% if(vehicle.airConditioning){%>
+								<span class="snow_flake"></span>
+							<%} %>
+							<%= vehicle.airConditioning%>
+						</label>
+						<label>
+							<% if(vehicle.fuel && vehicle.icon==""){%>
+								<span class="fuel"></span>
+							<%} else if(vehicle.fuel && vehicle.icon =="GLEAF"){ %>
+								<span class="green_check"></span>	
+							<%} %>
+							<%= vehicle.fuel%>
+						</label>
+						<label>
+							<a href="#">[+] Vehicle & Rate Details</a>
+						</label>
+					</div>
+				</div>
+				<div class="quote_wrapper">
+					
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" id="quote-template">
+			<div class="quote">
+				<% if(quotes.save){%>
+					<span class="save"><strong>SAVE $<%= quotes.save%>!</strong></span>
+				<%} %>
+				<% if(quotes.price){%>
+					<span><h2><%= quotes.price%></h2>USD Per Week</span>
+					<div class="approx">(<%= quotes.approxTotalPrice%> Approx. Tot.)</div>
+				<%} %>
+				<div class="pay_button">
+					<div class="align"></div>
+					<% if(!quotes.soldout){%>
+						<% if(!quotes.selectForQuote && quotes.prepaid==0){%>
+							<button class="pay_later">Pay Later</button>
+						<%} else if(quotes.prepaid==1){ %>
+							<button class="save_now">Save $ now</button>
+						<%} else if(quotes.selectForQuote==1){ %>
+							<button class="select_for_quote">Select for Quote</button>
+						<%} %>
+					<%} else { %>
+						<div class="sold_out">
+						<h2>SOLD OUT</h2>
+						<h4>THIS PICKUP DATE</h4>
+						</div>
+					<%}%>
+				</div>
+			</div>
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+				var routerObj = new vehicleRouter();
+				Backbone.history.start();
+				//if looking for direct descendants then do children('div').length
+		});
+	</script>
+</body>
+</html>

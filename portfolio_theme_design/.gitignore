@@ -1,0 +1,12 @@
+
+
+# Created by http://www.gitignore.io
+
+# Thumbnails
+._*
+
+### Jekyll ###
+_site/
+
+### Sass ###
+.sass-cache

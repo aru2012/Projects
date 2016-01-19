@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Create Order</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/centuar_global.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="css/order.css">
+	<link rel="stylesheet" href="css/font-awesome-4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="centuar-logo">
+				<h3>Centuar</h3><span>The perfect solution for your demands.</span>
+			</div>
+			<div id="menu">
+				<ul class="menu_list">
+					<li><div id="cart"></div></li>
+					<li><div class="tab">ADMIN</div><div class="arrows"><i class="fa fa-caret-down fa-lg"></i></div></li>
+					<li id="customer"><div class="tab">CUSTOMER</div></li>
+					<li><div class="tab">COLLEGE KREBS</div><div class="arrows"><i class="fa fa-caret-down fa-lg"></i></div>
+						<ul id="sub_menu" class="shadow">
+							<li><a href="#">YOUR PROFILE</a></li>
+							<li><a href="#">CUSTOMER/SHIP-TO LIST</a></li>
+							<li><a href="#">PASSWORD CHANGE</a></li>
+							<li><a href="#">ACCOUNT PREFERENCES</a></li>
+							<li><a href="#">YOUR TEMPLATE</a></li>
+						</ul>
+					</li>
+					<li><div class="tab" id="logout">LOG OUT</div></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="heading">
+				<h1>My Centuar <span class="login_text">Account</span></h1>
+				<div class="search_wrapper">
+					<div class="search">
+					<input type="text" placeholder="Quick Search"/>
+					<select><option value="#Type">#Type</option>
+					<option value="1">Option1</option>
+					<option value="2">Option2</option>
+					</select>
+					<i class="fa fa-caret-down fa-lg " id="down_icon" ></i></div>
+					<button id="search_button">Search</button>
+				</div>
+			</div>		
+			<div class= "content_menu">
+				<div id="c_menu">
+					<ul class="menu_list">
+						<li><div id="home"><i class="fa fa-home fa-2x"></i></div></li>
+						<li><div class="tab">DASHBOARD</div></li>
+						<li class="activ"><div class="tab">ORDER</div><div class="orange_arrow"><i class="fa fa-caret-down fa-lg"></i></div>
+							<ul id="content_sub_menu" class="shadow">
+								<li><a href="Order_Creation.html">CREATE ORDER</a></li>
+								<li><a href="#">CHANGE ORDER</a></li>
+								<li><a href="#">CREATE FROM TEMPLATE</a></li>
+							</ul>
+						</li>
+						<li><div class="tab">STATUS</div><div class="orange_arrow"><i class="fa fa-caret-down fa-lg"></i></div></li>
+						<li><div class="tab">DOCUMENTS</div></li>
+						<li><div class="tab">CONTACT</div></li>
+					</ul>
+				</div>
+			</div>
+			<div class="order_wrapper">
+				<div class="order_create">
+					<h2>Business Segment</h2>
+						<form>
+							<div class="top_group">
+								<input type="radio" value="cell"><label>Cellulose Derivitives</label>
+								<input type="radio" value="eng"><label>Engineered Materials</label>
+								<input type="radio" value="emul"><label>Emulsion Polymers</label>
+							</div>
+							<div class="bottom_group">
+								<div id="left_b"><input type="radio" value="eva"><label>Eva Polymers</label></div>
+								<div id="mid_b"><input type="radio" value="food"><label>Food Ingredients</label></div>
+								<div id="right_b"><input type="radio" value="inter"><label>Intermediate Chemistry</label></div>
+							</div>
+							
+							<h2>Sales Organization</h2>
+							<select>
+							<option>Select A Sales Organization </option>
+							</select><i class="fa fa-caret-down fa-lg" id="down_icon"></i> <i class="fa fa-question-circle fa-lg" class="tooltip" id="question_icon" title="This is Photoshop's version of Lorem Ipsum.Proin gravida Nibh vel Aenem sollicidum"></i>
+							<h2 class="order_type">Sales Order Type</h2>
+							<select>
+							<option>Select A Sales Order Type</option>
+							</select><i class="fa fa-caret-down fa-lg" id="down_icon"></i>	<i class="fa fa-question-circle fa-lg" id="question_icon" title="This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel Aenean sollicitudin,"></i>
+						</form>
+						<div class="nav_tabs">	
+							<a href="#"> Back</a> 					    
+							<button>Continue</button>
+						</div>	
+				</div>
+				<div id="order_progress_accordion">
+					<ul id="accordion">
+						<li class="accord_heading">
+							<h3>Order Progress</h3>
+						</li>
+						<li>
+							<div class="flow">
+								<div class="tabs">
+									<h4>Customer</h4><div class="expand_icon"><i class="fa fa-plus"></i></div>
+								</div>
+								<div class="expand">
+									<ul id="some_info">
+										<li><a href="#">Customer</a></li>
+										<li><a href="#">Any Road, City Name</a></li>
+										<li><a href="#">State, Country</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flow">
+								<div class="tabs">
+									<h4>Business Segment </h4><div class="expand_icon"><i class="fa fa-plus"></i></div>
+								</div>
+								<div class="expand hidden">
+									<ul id="some_info">
+										<li><a href="#">Business</a></li>
+										<li><a href="#">Any Road, City Name</a></li>
+										<li><a href="#">State, Country</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flow">
+								<div class="tabs">
+									<h4>Sales Organization </h4><div class="expand_icon"><i class="fa fa-plus"></i></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flow">
+								<div class="tabs">
+									<h4>Sales Order Type </h4><div class="expand_icon"><i class="fa fa-plus"></i></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flow">
+								<div class="tabs">
+									<h4>Ship to Address</h4><div class="expand_icon"><i class="fa fa-plus"></i></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flow">
+								<div class="tabs">
+									<h4>Unloading Point </h4><div class="expand_icon"><i class="fa fa-plus"></i></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flow">
+								<div class="tabs">
+									<h4>Bill to Party</h4><div class="expand_icon"><i class="fa fa-plus"></i></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flow">
+								<div class="tabs">
+									<h4>Product Selection </h4><div class="expand_icon"><i class="fa fa-plus"></i></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flow">
+								<div class="tabs">
+									<h4>Shopping Cart </h4><div class="expand_icon"><i class="fa fa-plus"></i></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="flow">
+								<div class="tabs">
+									<h4>Final Review </h4><div class="expand_icon"><i class="fa fa-plus"></i></div>
+								</div>
+							</div>
+						</li>
+					</ul>		
+				</div>
+			</div>	
+		</div>
+		<div class="footer">
+			<h6>Copyright 2014 Centuar Corporation</h6>
+			<ul class="footer_menu">
+				<li><a href="#">Help</a></li>
+				<li><a href="#">MSDS</a></li>
+				<li><a href="#">Terms and Conditions</a> </li>
+				<li><a href="#">Privacy Statement</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	 <script src="js/jquery-ui.min.js"></script>
+	 <script type="text/javascript" src="js/accordion.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Accordion function
+			accordion();
+
+			// menu list on hover
+			$('.menu_list li:eq(3)').on('click', function(e){
+				e.preventDefault();
+				$('#sub_menu').slideToggle();
+				
+			});
+			/*content submenu on hover*/
+			$('#c_menu .menu_list li:eq(2)').hover(function(){
+				$('ul#content_sub_menu').slideDown('slow');}, function(){
+				$('ul#content_sub_menu').hover(function(){
+					$('ul#content_sub_menu').show();}, function(){
+						$('ul#content_sub_menu').slideUp('fast');
+				});
+			});
+			$('#logout').on('click',function(e){
+				location.href='index.html';
+			});
+			$('#home').on('click',function(e){
+				location.href='Dashboard.html';
+			});
+			$('#customer').on('click',function(e){
+				location.href='Dashboard.html';
+			});
+		});
+			
+	</script>
+</body>
+</html>

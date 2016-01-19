@@ -1,0 +1,52 @@
+.fuel, .green_check, .snow_flake, .info_sm, .manual-icon, .red_x, .gray_people, .gray_suitcase, .transmission-automatic-icon{
+	background: url(sprites.png) no-repeat;
+	padding:1px 9px; 
+}
+.fuel{
+background-position: -64px -114px ;	
+width: 17px;
+height: 14px;
+}
+.green_check{
+background-position: -19px -213px ;
+width: 14px;
+height: 15px;
+}
+.snow_flake{
+background-position: -17px -163px ;
+width: 17px;
+height: 18px;
+}
+.info_sm{	
+background-position: -64px -163px ;
+width: 19px;
+height: 19px;
+}
+.info_sm:hover{
+	cursor: pointer;
+}
+.manual-icon{	
+background-position: -65px -65px ;
+width: 16px;
+height: 16px;
+}
+.red_x{
+	background-position: -68px -215px ;
+	width: 14px;
+	height: 15px;
+}
+.gray_people{
+	background-position: -16px -16px ;
+	width: 17px;
+	height: 17px;
+}
+.gray_suitcase{
+	background-position: -15px -65px ;
+	width: 17px;
+	height: 13px;
+}
+.transmission-automatic-icon{
+	background-position: -17px -115px ;
+	width: 16px;
+	height: 16px;
+}

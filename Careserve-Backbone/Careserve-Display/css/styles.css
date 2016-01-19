@@ -1,0 +1,140 @@
+body{
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+}
+.container{
+	width:1200px;
+	margin: 0px auto;
+	background-color: #fff;
+}
+.header_results{
+	background-color: #066198;
+	padding: 15px;
+	color: #fff;
+	margin: 10px 0;
+	overflow: hidden;
+}
+a{
+	color: #7CC3E0;
+}
+.car_title span{
+	padding-left:10px; 
+}
+.display_all{
+	float: left;
+	display: none;
+}
+.show_results{
+	float: right;
+}
+.header_results span{
+	padding-left:20px; 
+}
+.vehicles_container{
+	margin:10px 0; 
+}
+.car_title{
+	background-color: #EFEFEF;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.car_content{
+	width: 100%;
+	box-sizing:border-bottom;
+	padding: 0;
+	display: inline-block;	
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.car_image, .car_details,.quote_wrapper,.quote{
+	float: left;
+}
+.car_image, .car_details{
+	width:30%;
+}
+.quote_wrapper{
+	width: 40%;
+}
+h3, h4, h2{
+	display: inline-block;
+}
+.car_features{
+	margin: 10px 0;
+}
+.car_features label{
+	display: block;
+	margin: 5px 0;
+	color: #989898;
+}
+.car_features label span{
+	margin-right: 5px; 
+}
+.car_features label a{
+	text-decoration: none;
+}
+.quote_wrapper span{
+	display: block;
+	color: #222222;
+}
+.quote{
+	width: 40%;
+	margin-right:20px; 
+}
+h2{
+	font-size: 1.4em;
+	font-weight: normal;
+}
+.pay_later, .save_now{
+	width: 100px;
+	height: 40px;
+	border: 0;	
+}
+.pay_later{
+	background-color: #94C3FD;
+	color: #325BAB;
+}
+.pay_button{
+	color:#999999;
+	margin: 26px 0 0 0;
+}
+.save_now{
+	background-color: #308DFF;
+	color: #fff;
+}
+.select_for_quote{
+	width: 150px;
+	height: 40px;
+	border: 0;
+	margin: 30px 0 10px 0;
+	background-color: #308DFF;
+	color: #fff;
+}
+span.save{
+	padding: 8px;
+	background-color: #FCF11B;
+	margin-bottom: 10px; 
+}
+#filter{
+	word-spacing: 10px;
+}
+#show_ten_vehicles{
+	display: none;
+}
+#show_all_vehicles, #sort_price, #sort_size{
+	cursor: pointer;
+	text-decoration: underline;
+}
+.sold_out{
+	width: 140px;
+	border: 2px solid #999999;
+	padding: 10px;
+}
+button{
+	cursor: pointer;
+}
+.addBottomPadding{
+	margin-top: 73px;
+}
+.align{
+margin-top:-5px;
+padding-bottom: 15px;	
+}

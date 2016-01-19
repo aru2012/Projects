@@ -1,0 +1,113 @@
+
+	body{
+		font-family:Helvetica;
+		margin: 0 auto;
+		width: 1024px;
+		background-color: #fff;
+	}
+	header,footer{
+		background-color: #002D40;
+	}
+	header{
+		padding: 10px;
+		overflow: hidden;
+	}
+	header .logo{
+		width: 49%;
+		float: left;
+	}
+	header .account-nav{
+		width: 51%;
+		display: inline-block;
+	}
+	header .account-nav .empty{
+		height: 50px;
+	}
+	nav{
+		float: right;
+	}
+	nav a{
+		color: #CEF5F8;
+		font-size: 16px;
+		text-decoration: none;
+		padding:0 20px;
+	}
+	nav a:hover{
+		color: #C3D82D;
+	}
+	footer{
+		color: #CEF5F8;
+		text-align: center;
+		padding: 10px;
+	}
+	section{
+		padding:30px 40px;
+		overflow: hidden;
+		min-height: 350px;
+	}
+	article.classify, article.about{
+		width: 49%;
+		float:left;
+	}
+	section article.about{
+		padding-right: 2%;
+	}
+	.heading{
+		font-size: 22px;
+	}
+	section article.about p{
+		text-indent: 50px;
+		line-height: 25px;
+	}
+	.content .classified li{
+		padding: 10px 0;
+	}
+	small{
+		color: #A6A7A9;
+		font-size: 12px;
+	}
+	.all-classified div{
+		border:1px solid rgba(0,0,0,0.2);
+		border-radius: 5px;
+		margin:8px 14px 8px 0;
+		width: 29%;
+		float: left;
+		padding: 10px;
+		color: #AFC445;
+		cursor:pointer;
+	}
+	.all-classified div span{
+		display: block;
+	}
+	.all-classified div span:nth-child(2){
+		padding-top: 5px;
+	} 
+	.all-classified div .class-heading{
+		color: #103A39;
+	}
+	#errors-list{
+		color:red;
+	}
+	.sign-log, .user-login{
+		color: #fff;
+	}
+	.links{
+		padding:0 0 20px 0;
+		display:block;
+	}
+	.links a{
+		color:#C3D82D;
+		padding: 5px;
+		margin-left:2px;
+	}
+	.links a:hover{
+		color:#000;
+		background-color:#eee;
+	}
+	.logout{
+	cursor:pointer;
+	}
+	.user-name{
+	color: #109f11;
+	font-weight:bold;
+	}

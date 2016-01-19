@@ -1,0 +1,38 @@
+body{
+	color:#727272;
+	font-family: "Yu Gothic",Arial, Helvetica, sans-serif;
+}
+.container{
+	width: 1024px;
+	margin-bottom: 60px;
+    padding:20px 0px;
+}
+.row{
+    margin: 15px auto;
+    width: inherit;
+}
+.employee{
+    border: 2px solid #99D9EA;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.employee_photo{
+    width: 100px;
+    height: 120px;
+    padding-right: 10px;
+}
+.employee_info{
+    padding-bottom: 10px;
+    border-bottom:2px solid rgba(0,0,0,0.4); 
+    overflow: hidden;
+}
+.emp-name{
+    padding-top: 25px;
+}
+.employee_details{
+    padding-top: 10px;
+    overflow: hidden;
+}
+h1{
+    font-weight: bold;
+}

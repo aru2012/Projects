@@ -1,0 +1,563 @@
+.main{
+		margin: 0 auto;
+		height:500px;
+		width:680px;
+		border: 5px solid white;
+		border-radius: 4px 10px 35px 10px;
+	}
+	.sky{
+		background-color: #66FFFF;
+		height: 300px;
+		z-index: -2;
+	}
+	.water{
+		background-color: #33CCFF;
+		height: 200px;
+		overflow: hidden;
+		border-radius: 0px 0px 26px 0px;
+		position: relative;
+	}
+	.water div{
+		display: inline-block;
+    	height: 15px;
+    	overflow: hidden;
+	}
+	.light_waves{
+		width: 20px;
+		height: 5px;
+		border-width:0px 6px 10px 6px;
+		border-style: none groove groove groove; 
+		border-color: #33CCFF;
+		border-radius: 0 0 50px 50px;
+		-moz-border-radius: 0 0 50px 50px;
+		-webkit-border-radius: 0 0 50px 50px;
+		display: inline-block;
+		animation: scale 1s infinite;
+		animation-delay: 1s;
+	}
+	.water div:nth-child(even) span:first-child{
+		margin-left: 15px;
+	}
+	.dark_waves{
+		width: 20px;
+		height: 5px;
+		border-width:0px 6px 10px 6px;
+		border-style: none groove groove groove; 
+		border-color: #00E6B8;
+		border-radius: 0 0 50px 50px;
+		-moz-border-radius: 0 0 50px 50px;
+		-webkit-border-radius: 0 0 50px 50px;
+		display: inline-block;
+		animation: scale 1s infinite;
+	}
+
+	.light-wave-bunch{
+		position: relative;
+		z-index: 5;
+		animation: move 2s infinite;	
+		animation-timing-function: linear;
+	}
+
+	.dark-wave-bunch{
+		position: relative;
+		z-index: 5;
+		animation: move 2s infinite;	
+		animation-delay: 2s;
+		animation-timing-function: linear;
+	}
+
+	@keyframes scale{
+		0%{
+			position:relative;
+			transform:scale(1);
+		}
+		25%{
+			top:3px;
+			transform:scale(1.1);
+		}
+		50%{
+			top: 5px;
+			transform:scale(1.2);
+		}
+		75%{
+			top:3px;
+			transform:scale(1.1);
+		}
+		100%{
+			top: 0;
+			transform:scale(1);
+		}
+	}
+	@keyframes move{
+		0%{
+			left:-10px;
+		}
+		50%{
+			left: 0px;
+		}
+		100%{
+			left: 10px;
+		}
+	}	
+.clouds {	
+	margin: 5px;
+	position: relative;
+}
+.cloud_pos1{
+	width: 160px;
+	height: 90px;
+	top: 50px;
+	left: 80px;
+	animation-name:cloud1_move;
+	animation-duration:30s;
+	animation-iteration-count: infinite;
+
+}
+@keyframes cloud1_move{
+	 from {left:80px;}
+    to {left:600px;}
+} 
+.cloud_pos2{
+	width: 160px;
+	height: 90px;
+	top: 0px;
+	right: 450px;
+	animation-name:cloud2_move;
+	animation-duration:30s;
+	animation-iteration-count: infinite;	
+	animation-delay:0s;
+}
+@keyframes cloud2_move{
+	 from {right:-590px;}
+    to {right:0px;}
+}
+.cloud_pos3{
+	width: 120px;
+	height: 60px;
+	bottom: 217px;
+	right: 300px;
+	animation-name:cloud3_move;
+	animation-duration:40s;
+	animation-iteration-count: infinite;	
+	
+}
+@keyframes cloud3_move{
+	 from {right:-660px;}
+    to {right:0px;}
+}
+.cloud_pos4{
+	width: 120px;
+	height: 60px;
+	bottom: 94px;
+	left: -10px;
+	animation-name:cloud4_move;
+	animation-duration:50s;
+	animation-iteration-count: infinite;	
+}
+@keyframes cloud4_move{
+	 from {left:-110px;}
+    to {left:500px;}
+}
+.clouds div {
+    border: solid 5px white;
+}
+.bottom {
+    background-color: #fff;
+    border-radius: 100px;
+    height: 50px;
+    position: absolute; 
+    top: 30px;
+    left:25px;
+    width: 80px;
+    z-index: 3;
+
+}
+.right{
+    background-color: #fff;
+    border-radius: 100%;
+    height: 35px;
+    left: 93px;
+    position: absolute; 
+    top: 36px; 
+    width: 52px;
+    z-index: 2;
+
+}
+.left{
+    background-color: #fff;  
+    border-radius: 100%;
+    height: 32px;
+    right: 102px;
+    position: absolute; 
+    top: 39px; 
+    width: 50px;
+}
+.left_s{
+    background-color: #fff;  
+    border-radius: 100%;
+    height: 32px;
+    right: 62px;
+    position: absolute; 
+    top: 39px; 
+    width: 52px;
+    z-index: 2;
+
+}
+.right_s{
+    background-color: #fff;
+    border-radius: 100%;
+    height: 42px;
+    left: 40px;
+    position: absolute; 
+    top: 36px; 
+    width: 59px;
+    z-index: 2;
+}
+
+.sun{
+    background-color: #FF9900;  
+    border-radius: 100%;
+    height: 32px;
+    left: 555px;
+    position: absolute; 
+    top: 28px; 
+    width: 35px;
+    border: 2px solid #FFB870;
+    z-index: 1;
+    box-shadow: 0px 2px 8px 12px #FFFF66;
+    animation-name:sun_scale;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+	animation-delay:0s;	
+}
+@keyframes sun_scale{
+		0%{	position:relative;transform:scale(1);}
+		25%{transform:scale(1.02);}
+		50%{transform:scale(1.04);}
+		75%{ransform:scale(1.02);}
+		100%{transform:scale(1);}
+	}
+.row{
+	margin: 5px;
+	position: absolute;
+	width: 220px;
+	height: 110px;
+	top:220px;
+	left:235px;
+	z-index: 4;
+	-webkit-animation-name:minion_move;
+	-webkit-animation-duration:8s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name:minion_move;
+	animation-duration:30s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-out;	
+	animation-direction:alternate;
+}
+@keyframes minion_move{
+	 from {left:270px;}
+    to {left:720px;}
+} 
+.boat{		
+	margin: 5px;
+	position: absolute;
+	width: 120px;
+	height: 26px;
+	bottom:0px;
+	left:0px;
+	border-width:0px 40px 40px 40px;
+	border-style: none solid solid solid; 
+	border-color: #996633;
+	border-radius: 0 0 70px 70px;
+	-moz-border-radius: 0 0 70px 70px;
+	-webkit-border-radius: 0 0 70px 70px;
+	}
+.cartoon{		
+	margin: 5px;
+	position: absolute;
+	width: 26px;
+	height: 0px;
+	bottom:35px;
+	left:63px;
+	border-width:40px 20px;
+	border-style: solid solid solid solid; 
+	border-color: #FFFF00;
+	border-radius: 70px 70px 0px 0;
+	-moz-border-radius: 70px 70px 0 0;
+	-webkit-border-radius:70px 70px 0 0;
+}
+.smile{
+	width: 20px;
+	height: 5px;
+	position: absolute;
+	top:35px;
+	left:87px;
+	border-width:0px 2px 4px 2px;
+	border-style: none solid solid solid; 
+	border-color: #FF9900;
+	border-radius: 0 0 50px 50px;
+	-moz-border-radius: 0 0 50px 50px;
+	-webkit-border-radius: 0 0 50px 50px;
+	animation-name:smile_scale;
+	animation-duration:5s;
+	animation-iteration-count: infinite;
+}
+@keyframes smile_scale{
+		0%{
+			position:relative;
+			transform:scale(0.6);
+		}
+		50%{
+			
+			transform:scale(0.9);
+		}
+		100%{
+			
+			transform:scale(0.6);
+		}
+	}
+
+.eye_div{
+	margin: 5px;
+	position: relative;
+	width: 85px;
+	height: 20px;
+	bottom:-6px;
+	left:52px;
+}
+.eye_l{		
+	position: absolute;
+	width: 5px;
+	height: 4px;
+	bottom:-3px;
+	left:23px;
+	border-width:5px;
+	border-style: solid solid solid solid; 
+	border-color: rgba(0,0,0,0.3);
+	border-radius: 10px;
+	animation-name:eyel_scale;
+	animation-duration:5s;
+	animation-iteration-count: infinite;
+	animation-delay:0s;	
+}
+@keyframes eyel_scale{
+		0%{
+			position:relative;
+			transform:scale(0.8);
+
+		}
+		50%{
+			
+			transform:scale(0.9);
+		}
+		100%{
+			
+			transform:scale(0.8);
+		}
+	}
+.eye_r{		
+	position: absolute;
+	width: 5px;
+	height: 4px;
+	bottom:-3px;
+	left:47px;
+	border-width:5px;
+	border-style: solid solid solid solid; 
+	border-color: rgba(0,0,0,0.3);
+	border-radius: 10px;
+	animation-name:eyer_scale;
+	animation-duration:5s;
+	animation-iteration-count: infinite;
+}
+@keyframes eyer_scale{
+		0%{
+			position:relative;
+			transform:scale(0.8);
+		}
+		50%{
+			
+			transform:scale(0.9);
+		}
+		100%{
+			
+			transform:scale(0.8);
+		}
+	}
+.eye-rope{
+	position: absolute;
+	width: 15px;
+	height: 5px;
+	bottom:82px;
+	left:64px;
+	border-width:5px;
+	border-style: solid solid solid solid; 
+	border-color: rgba(0,0,0,0.4);
+	border-radius: 3px;
+}
+.glasses_l{		
+	margin: 5px;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	bottom:-12px;
+	left:15px;
+	border-width:5px;
+	border-style: solid solid solid solid; 
+	border-color: rgba(256,256,256,0.8);
+	border-radius: 15px;
+}
+.glasses_r{		
+	margin: 5px;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	bottom:-12px;
+	left:38px;
+	border-width:5px;
+	border-style: solid solid solid solid; 
+	border-color: rgba(256,256,256,0.8);
+	border-radius: 15px;
+}
+.robe div {
+    border: solid 3px #33CCFF;
+}
+.robe .bottom_robe {
+    background-color: #3399FF;
+    border-radius: 4px 4px 1px 1px;
+    height: 16px;
+    position: absolute; 
+    top: 46px;
+    left:78px;
+    width: 39px;
+    z-index: 3;
+    text-shadow: 2px 2px 10px black;
+}
+.name{
+	color: #fff;
+    text-align: center;
+    font-size:8px;
+    font-weight: bold;
+	margin-top: 4px;
+}
+.right_robe{
+    background-color: #fff;
+    border-radius: 100%;
+    height: 18px;
+    left: 112px;
+    position: absolute; 
+    top: 44px; 
+    width: 20px;
+    z-index: 2;
+
+}
+.left_robe{
+    background-color: #fff;
+    border-radius: 100%;
+    height: 18px;
+    left: 64px;
+    position: absolute; 
+    top: 44px; 
+    width: 20px;
+    z-index: 2;
+
+}
+.right_hand{
+	width: 20px;
+	height: 5px;
+	position: absolute;
+	top: 40px;
+	left:120px;
+	border-width:0px 4px 10px 4px;
+	border-style: none solid solid solid; 
+	border-color:  #FFFF00;
+	border-radius: 0 0 50px 50px;
+	-moz-border-radius: 0 0 50px 50px;
+	-webkit-border-radius: 0 0 50px 50px;
+	animation-name:hand1_scale;
+	animation-duration:5s;
+	animation-iteration-count: infinite;
+	animation-delay:0s;	
+}
+@keyframes hand1_scale{
+		0%{
+			position:relative;
+			transform:scale(1);
+		}
+		50%{
+			
+			transform:scale(1.2);
+		}
+		100%{
+			
+			transform:scale(1);
+		}
+	}
+
+.left_hand{
+	width: 20px;
+	height: 5px;
+	position: absolute;
+	top: 40px;
+	left:50px;
+	border-width:0px 4px 10px 4px;
+	border-style: none solid solid solid; 
+	border-color:  #FFFF00;
+	border-radius: 0 0 50px 50px;
+	-webkit-border-radius: 0 0 50px 50px;
+	animation-name:hand2_scale;
+	animation-duration:5s;
+	animation-iteration-count: infinite;
+	animation-delay:0s;	
+}
+@keyframes hand2_scale{
+		0%{
+			position:relative;
+			transform:scale(0.9);
+		}
+		50%{
+			
+			transform:scale(1.1);
+			transform:rotate(40deg);
+		}
+		100%{
+			
+			transform:scale(0.9);
+		}
+	}
+.rower{
+	width: 150px;
+	height: 1px;
+	position: absolute;
+	top: 70px;
+	left:55px;
+	border-width:2px;
+	border-style: solid solid solid solid; 
+	border-color: #CC9900;
+	background-color: #CC9900;
+	border-radius: 1px;
+	-webkit-border-radius:1px;
+	transform:rotate(110deg);
+    animation-name:rower_turn;
+	animation-duration:5s;
+	animation-iteration-count: infinite;
+	animation-delay:0s;	
+}
+@keyframes rower_turn{
+		0%{
+			position:relative;
+			transform:rotate(110deg);
+		}
+		50%{	
+			transform:rotate(120deg);
+		}
+		100%{
+			transform:rotate(110deg);
+		}
+	}
+.audio1{
+	animation-name:wind;
+	animation-iteration-count:infinite;
+}
+@keyframes wind{
+
+}

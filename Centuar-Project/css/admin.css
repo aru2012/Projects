@@ -1,0 +1,153 @@
+#menu{
+	width: 41%;
+}
+#c_menu .menu_list li{
+	padding: 11px 18px;
+}
+#c_menu .menu_list li:first-child{
+	padding-left: 4px;
+	padding-right: 18px;
+}
+#login_mgmt{
+	margin: 0px 140px;
+	padding: 15px 0px;
+	height: auto;
+	color:#a7a7a7;
+	font-size: 0.8em;
+}
+#login_mgmt h2{
+	text-align: left;
+	font-size: 18px;
+	color: #A65290;
+}
+.login_param{
+	margin: 15px 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+.user_lockout{
+	margin: 15px 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+.login_msg{
+	margin: 15px 0px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	overflow: hidden;
+}
+.user_msg{
+	margin: 15px 0px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	overflow: hidden;
+}
+#l1, #l2, #l3, #l4{
+	width:100%;
+	height: auto;	
+}
+.h1{
+	width:120px;
+	float: right;
+}
+#l1 .fields{
+	height: auto;
+	margin-bottom: 10px;
+	width: 100%;
+}
+#l1 .fields div:first-child{
+	width: 25%;
+	float: left;
+	margin-right: 20px;
+}
+#l1 .fields div:nth-child(2){
+	width: 57%;
+	float: left;
+	margin-right: 7px;
+	margin-bottom: 5px;
+}
+#l1 .fields div.btn{
+	width: 14.6%;
+	float: right;
+}
+#l1 .fields div.date{
+	width: 20%;
+	float: left;
+}
+#login_mgmt input{
+	width: 144px;
+	height: 25px;
+}
+#login_mgmt h3{
+	color: #0099cc;
+	font-size: 14px;
+	font-weight: bold;
+}
+#login_mgmt label{
+	font-size: 10.5px;
+}
+/*login accordion*/
+.msg_accordion{
+	height: auto;
+	width: 72.5%;
+	clear: both;
+	float: right;
+	margin-top: 14px;
+	overflow: hidden;	
+}
+.msg{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.msg_tab{
+	width:100%;
+	height: auto;
+	padding: 9px 0;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	background-color: #F2FAFC;
+	overflow: hidden;
+}
+.display_details{
+	height: auto;
+	clear: both;
+}
+.hidden{
+	display: none;
+}
+.admin_expand_icon{
+	float: left;
+	padding: 0px 14px;
+	cursor: pointer;
+}
+.admin_delete_icon{
+	float: right;
+	padding: 0px 14px;
+	cursor: pointer;
+}
+.fields .msg_accordion h4{
+	font-size: 12px;
+	color: #000;
+	float: left;
+}
+.fields .msg_accordion .display_details .msg_info li{
+	font-size: 12px;
+	padding: 10px 15px;
+	height: auto;
+	border-bottom: 0px ;
+	clear: both;
+}
+.fields .msg_accordion a{
+	color:#0099CC;
+}
+i:not(.fa-calendar):hover{
+	color: #0099CC;
+	cursor: pointer;
+}
+.display_details ul.msg_info h4{
+	width: auto;
+	display: block;
+}

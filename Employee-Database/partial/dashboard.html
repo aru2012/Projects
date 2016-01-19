@@ -1,0 +1,55 @@
+<html>
+<section>
+	<div class="group">
+		<article>
+			<div class="group-heading"><h4><strong>Frequent Contacts</strong></h4></div>
+			<div class="group-content">
+				<ul id="contacts">
+					<li ng-repeat="emp in employee.contacts | limitTo: 5">	<a href="">{{emp.name}}-{{emp.number}} </a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<a class="pull-right" href=""> View All</a>
+	</div>
+	<div class="group">
+		<article>
+			<div class="group-heading"><h4><strong>Latest Events</strong></h4></div>
+			<div class="group-content">
+				<ul id="events">
+					<li ng-repeat="emp in employee.events | limitTo: 5">	<a href="">{{emp.name}} - {{emp.dob}} </a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<a class="pull-right" href=""> View All</a>
+	</div>
+</section>
+<section>
+	<div class="group">
+		<article>
+			<div class="group-heading"><h4><strong>Latest Notifications</strong></h4></div>
+			<div class="group-content">
+				<ul id="notifications">
+					<li ng-repeat="emp in employee.messages | limitTo: 5"><a href="">{{emp.message}}</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<a class="pull-right" href=""> View All</a>
+	</div>
+	<div class="group">
+		<article>
+			<div class="group-heading"><h4><strong>Latest Messages</strong></h4></div>
+			<div class="group-content">
+				<ul id="messages">
+					<li ng-repeat="emp in employee.messages | limitTo: 5">	<a href="">{{emp.name}}-{{emp.message_subject}} </a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<a class="pull-right" href="">View All</a>
+	</div>
+	
+</section>
+</html>

@@ -1,0 +1,171 @@
+body{
+	font-family: arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	background-color: #BDBDBD;
+}
+.container{
+	width:1200px;
+	margin: 20px auto;
+	background-color: #fff;
+	padding: 10px;
+	overflow: hidden;
+}
+.extras{
+	width: 74%;
+	padding-right: 10px;
+}
+.extras, .sidebar{
+	display: inline-block;
+	float: left;
+}
+.submit{
+	width: 100%;
+	height: 35px;
+}
+.submit_btn{
+	float: right;
+	width: 80px;
+	height: 35px;
+	border: 0;	
+	background-color: #308DFF;
+	color: #fff;
+	cursor: pointer;
+}
+.extras_container{
+	margin: 15px 0;
+	border-bottom: 3px solid rgba(0,0,0,0.1);
+}
+.data{
+	border-bottom: 1.5px solid rgba(0,0,0,0.2);
+	margin-bottom: 10px;
+}
+.category, .category_extras,.data, .title{
+	overflow: hidden;
+	clear: both;
+}
+.category_title{
+	padding:8px;
+	background-color: #B6B6B6;
+}
+.category_extras .title{
+	padding:8px;
+	background-color: #EEEEEE;
+}
+.category_extras .data{
+	padding:8px;
+}
+.category_extras .title div{
+	float: left;
+	padding-right: 1%;
+}
+.category_extras .data div{
+	float: left;
+	padding-right: 8px;
+}
+.add{
+	width: 3%;
+}
+.desc{
+	width: 29%;
+}
+.img, .quantity{
+	width: 20%;
+} 
+.category_extras .title .price, .category_extras .data .price{
+	width: 20%;
+	float: right;
+	padding-right: 0;
+}
+.category_extras .data .add{
+	margin-top: 25px;
+}
+h6{
+	font-weight: bold;
+	font-size: 0.9em;
+}
+p{
+	font-size: 0.9em;
+	font-weight: normal;
+	padding-top: 4px;
+}
+a{
+	color: #41ABE5;
+}
+/*Styling for Sidebar*/
+.sidebar{
+	width: 25%;
+}
+.sidebar section{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.sidebar section .itinerary_title, .sidebar section .car_title{
+	background-color: #FCF11B;
+	overflow: hidden;
+	padding: 8px 10px;
+}
+.sidebar section div h5{
+	float: left;
+	width: 50%;
+}
+.sidebar .itinerary .itinerary_title span, .sidebar .car_info .car_title span{
+	float: right;
+} 
+.sidebar section .itinerary_details{
+	background-color: #F2F2F2;
+	padding: 8px 10px;
+	margin-top: 3px;
+}
+.sidebar section .itinerary_details div{
+	padding: 8px;
+}
+.sidebar section .itinerary_details div:nth-child(even) {
+    background: #fff;
+}
+.sidebar section .itinerary_details div p, .sidebar section .car_details div p {
+	padding-bottom: 5px;
+}
+.sidebar section .itinerary_details .itinerary_location p:nth-child(2){
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.sidebar section .car_details{
+	background-color: #fff;
+	margin-top: 3px;
+	border:1px solid rgba(0,0,0,0.2);
+}
+.sidebar section .car_details .car_wrapper{
+	padding: 8px 10px;
+}
+.sidebar section .car_details .car_info{
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.sidebar section .car_details .rate_details{
+	overflow: hidden;
+}
+.sidebar section .car_details .rate_details div p:nth-child(odd), .sidebar section .car_details .total_rate p:first-child{
+	width: 70%;	
+	float: left;
+}
+.sidebar section .car_details .rate_details div p:nth-child(even), .sidebar section .car_details .total_rate p:last-child{
+	float: right;
+}
+.sidebar section .car_details .rate_details div {
+	clear: both;
+}
+.sidebar section .car_details .total_rate{
+	background-color: #FCF11B;
+	border-top:1px solid rgba(0,0,0,0.2);
+	clear: both;
+	overflow: hidden;
+	padding: 8px 10px;
+}
+.sidebar section .car_details .rate_details .manRate span{
+	display: inline-block;
+}
+.sidebar section .car_details .rate_details .manRate p span:first-child{
+	width: 5%;
+	float: left;
+}
+.sidebar section .car_details .rate_details .manRate p span:last-child{
+	width: 80%;
+}

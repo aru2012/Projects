@@ -1,0 +1,44 @@
+1. Create an employee Dashboard panel using AngularJS
+
+2. The Dashboard has following Modules
+	a. Main Dashboard
+	b. Contacts
+	c. Events
+	d. Notifications
+	e. Messages
+3. Create a big JSON with all dummy data like contacts, Events, etc
+
+4. Dash board will contain the small views of Contacts, latest Events, Latest Notofications Latest Messages.
+
+5. On selecting Contacts tab show list of contacts with only name. If user clicks on name, redirect to another view and show full details of the contact like Home phone, Work phone, Email, Address etc. 
+Show a button to add a new contact. On clciking of add button launch a modal popup with form to give contact details.
+
+6. On Selecting Events tab show the Events like birthday of contacts, Work Anniversaries etc...
+
+7. On Selecting Messages tab show all the messages list with subject line. On clicking on subject link open the message in a new view and show full message.
+
+8. Creae login and registration views as well. Give access to dashboard for the logged in users only.
+
+9. Show user name on top right. On clicking on that open a dropdown and show profile, settings and logout links.
+
+10. take a look at the screenshot attached.
+
+1. create views for login and register:(data-local storage) call from local storage and compare username and password
+2. create json objects for different username(email id's is the key)
+aru@g.com: {
+name:"",
+pud: " ",
+gudlkj:
+}
+convert object into string to store in localstorage;
+pass this object on submit and compare password with the login password
+
+3.  
+name is a dropdown, and have profile, logout;
+4. create dummy data in json
+user click on contact load another view
+5.ng-template use to show different views for each contact 
+
+message: subject and decription(show whatever messages in the  json data)-show recent 5 messages
+ 
+ui-bootstrap

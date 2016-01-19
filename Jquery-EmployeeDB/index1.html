@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Emlpoyee Database</title>
+	<style type="text/css">
+	body{
+		margin: 0 auto;
+		width: 1024px;
+	}
+	form div{
+		margin-bottom: 10px;
+	}
+	form div div{
+		display: inline-block;
+	}
+	form div .form-labels{
+		width:5%;
+	}
+	form div div:first-child{
+		padding-right: 50px;
+	}
+	form #showList{
+		
+	}
+	table, tr, thead, td{
+		border:1px solid rgba(0,0,0,0.2);
+	}
+	table tr th, table tr td{
+		width: 20%;
+		text-align: left;
+	}
+	table{
+		margin-top: 20px;
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<h2>Employee Database</h2>
+	
+	<form id="employee-form">
+		<div class="control-group">
+			<div class="form-labels"><label>Name:</label></div>
+			<div class="form-inputs"><input type="text" id="name" placeholder="Enter name"/></div>
+			<span class="help-inline"></span>
+		</div>
+		<div class="control-group">
+			<div class="form-labels"><label>Email:</label></div>
+			<div class="form-inputs"><input type="email" id="email" placeholder="Enter email-Id"/></div>
+			<span class="help-inline"></span>
+		</div>
+		<div class="control-group">
+			<div class="form-labels"><label>Location:</label></div>
+			<div class="form-inputs"><select id="location"><option selected="selected" disabled="disabled">Select a Location</option><option>San Francisco</option><option>Boston</option><option>New York</option></select></div>
+			<span class="help-inline"></span>
+		</div>
+		<input type="submit" value="Submit" id="submit"/>
+		<a href="" id="showList">View List</a>
+
+		<div class="employee-table">
+			<table id="tableData">	
+				
+			</table>
+		</div>
+	</form>
+	<script type="text/javascript" src="libs/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	var operation = "A"; //"A"=Adding; "E"=Editing
+	var selected_index = -1; //Index of the selected list item
+	var employees = localStorage.getItem("employees");//Retrieve the stored data
+	employees = JSON.parse(employees); //Converts string to object
+	if(employees == null) //If there is no data, initialize an empty array
+		employees = [];
+	function employee_list(){		
+		$("#tableData").html("");
+		$("#tableData").html(
+			"<thead>"+
+			"	<tr>"+
+			"	<th>Name</th>"+
+			"	<th>Email</th>"+
+			"	<th>Location</th>"+
+			" <th>Edit/Delete</th>"+
+			"	</tr>"+
+			"</thead>"+
+			"<tbody>"+
+			"</tbody>"
+			);
+		for(var i in employees){
+			var emp = JSON.parse(employees[i]);
+		  	$("#tableData tbody").append("<tr>"+
+										 "	<td>"+emp.Name+"</td>" + 
+										 "	<td>"+emp.Email+"</td>" + 
+										 "	<td>"+emp.Location+"</td>" +
+										 "	<td><a href='' alt='Edit"+i+"' class='btnEdit'>Edit</a> <a href='' alt='Edit"+i+"'class='btnDelete'>Delete</a></td>" +   
+		  								 "</tr>");
+		}
+	}
+	function add(){
+		var employee = JSON.stringify({
+			Name  : $("#name").val(),
+			Email : $("#email").val(),
+			Location : $("#location").val()
+		});
+		employees.push(employee);
+		localStorage.setItem("employees", JSON.stringify(employees));
+		return true;
+	}
+
+	function edit(){
+		employees[selected_index] = JSON.stringify({
+			Name  : $("#name").val(),
+			Email : $("#email").val(),
+			Location : $("#location").val()
+		});//Alter the selected item on the table
+		localStorage.setItem("employees", JSON.stringify(employees));
+		operation = "A"; //Return to default value
+		return true;
+	}
+
+	function deleteEmp(){
+		employees.splice(selected_index, 1);
+		localStorage.setItem("employees", JSON.stringify(employees));
+	}
+	
+	$("#employee-form").bind("submit",function(){
+		if(operation == "A"){
+			return add();
+		}
+		else
+			return edit();
+	});
+
+	employee_list();
+
+	$(".btnEdit").bind("click", function(event){
+		event.preventDefault();
+		operation = "E";
+		selected_index = parseInt($(this).attr("alt").replace("Edit", ""));
+		
+		var emp = JSON.parse(employees[selected_index]);
+		$("#name").val(emp.Name);
+		$("#email").val(emp.Email);
+		$("#location").val(emp.Location);
+		$("#name").focus();
+	});
+
+	$(".btnDelete").bind("click", function(event){
+		event.preventDefault();
+		selected_index = parseInt($(this).attr("alt").replace("Delete", ""));
+		deleteEmp();
+		employee_list();
+	});
+	$("#showList").bind("click", function(event){
+		event.preventDefault();
+		$('table').show();
+	});
+});
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+#General Site Settings
+title: Portfolio theme
+email: ax1245@gmail.com
+description: "UI Developer // Artist // Designer"
+
+# NOTE: The Logo and Background image are defined in the all.sass document.
+
+menu:
+- {name: About Me, url: '#about-me'}
+- {name: Skills, url: '#skills'}
+- {name: Projects, url: '#project'}
+- {name: Contact, url: '#contact'}
+
+#-------------------------------
+# About Section
+
+# NOTE: The user picture is defined in the all.sass document.
+
+blurb: >
+  **Lorem ipsum dolor sit amet, consectetur adipisicing elit**. Obcaecati facere odit ea eaque, omnis molestiae facilis illo. 
+  Aliquam laboriosam eum culpa eos rem quasi, incidunt, natus numquam necessitatibus nisi harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+  Earum repellendus impedit placeat, fuga recusandae quod blanditiis. Perspiciatis, blanditiis, architecto! Modi nisi itaque voluptates deleniti, reiciendis necessitatibus! Totam et facilis nesciunt.
+
+skills:
+- {name: Communication, value: '9'}
+- {name: Organization, value: '7'}
+- {name: Learning, value: '10'}
+- {name: Visual Design, value: '6'}
+- {name: UX Design, value: '8'}
+- {name: JavaScript/jQuery, value: '8'}
+- {name: CSS3/SASS, value: '9'}
+- {name: HTML5, value: '9'}
+
+
+#-------------------------------
+# Projects Section
+
+projects:
+- {name: TYPO International Design Talks, folder: 'proj-1', file: 'work/proj-1.html'}
+- {name: City-IN website concept, folder: 'proj-2', file: 'work/proj-2.html'}
+- {name: Crispy Icons, folder: 'proj-3', file: 'work/proj-3.html'}
+- {name: Flat Mobile UI/UX Concept, folder: 'proj-4', file: 'work/proj-4.html'}
+- {name: Fresh It Up, folder: 'proj-5', file: 'work/proj-5.html'}
+- {name: Timeline Page, folder: 'proj-6', file: 'work/proj-6.html'}
+- {name: Weather Dashboard, folder: 'proj-7', file: 'work/proj-7.html'}
+- {name: Stripes & Co, folder: 'proj-8', file: 'work/proj-8.html'}
+
+
+
