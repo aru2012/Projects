@@ -1,0 +1,47 @@
+J-Query Assignment :
+
+1st Task:
+I created the html document composing of three div's and a button:
+
+
+<!--event capturing craete click events for ach div , write all the learning in a notepad-->
+	<div id="grandest_parent" style="margin:0 auto; width:360px; paddin:20px; height:360px; background-color:red;">
+		<div id="grand_parent" style="margin:0 auto; width:260px; paddin:20px; height:260px; background-color:black;">
+			<div id="parent" style="margin:0 auto; width:160px; paddin:20px; height:160px; background-color:green;">
+				<button id="buttn">
+					Click me
+				</button>
+			</div>
+		</div>
+	</div>
+
+And I included the following Javascript on clicking the Click me button:
+
+$(document).ready(function(){
+$('#buttn').click(function(){
+				alert("clicked on button");
+		});
+		$('#parent').click(function(){
+				alert("clicked on parent div");
+		});
+		$('#grand_parent').click(function(){
+				alert("clicked on grand parent div");
+		});
+		$('#grandest_parent').click(function(){
+				alert("clicked on grandest parent div");
+		});
+
+		//for stopping propagation
+		$('#buttn').click(function(e){
+   				e.stopPropagation();
+		  alert("stopped propagation")
+		})
+
+	})
+;
+
+Observations:
+1. When I click on button: button alert pops up and following that all the other nested div alerts will pop up.
+2. The propagation is from child to the last parent. Its bubbling out.
+3. When I click on parent-div then all other nested parent-div alerts pop up other than button alert since it is a child node.
+4. When the e.stopPropagation() method is used it stops the bubbling and limit it only till button. Thus other alerts of nested div parents don't pop up.

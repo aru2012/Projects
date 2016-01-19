@@ -1,0 +1,41 @@
+body{
+		background-color: #404040;
+	}
+	div, canvas{
+		margin: 20px;
+		background-color: #fff;
+	}
+	#my_canvas{
+		border:8px solid #FFCD7B;
+		float: left;
+		padding: 10px;
+		border-radius: 8px;
+	}
+	.form{
+		border:8px solid #ff0080;
+		border-radius: 8px;
+		width:180px;
+		height: 300px;
+		padding: 0px 40px 40px 40px;
+		float: left;
+	}
+	label{
+		display: block;
+	}
+	input{
+		margin: 10px 0;
+		display: block;
+	}
+	.settings{
+		border:8px solid #0080c0;
+		border-radius: 8px;
+		padding: 20px 20px;
+		float: left;
+		width: 170px;
+		height: 270px;
+	}
+	h1{
+		color: #fff;
+		background-color: #404040;
+		padding: 0 0 0 20px;
+	}

@@ -1,0 +1,100 @@
+<!--Create a script file with min of 5 functions such as sort, min, max etc which we can reuse for different forms.
+(External Javascript File)- Include this as part of HTML and try to invoke the functionalities.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment-3</title>
+	<style type="text/css">
+	div{
+		margin: 0px auto;
+		padding: 10px;
+		line-height: 24px;
+	}
+	div#wrapper{
+		margin: 0 auto;
+		max-width: 60%;
+		border: 1px solid white;
+		background-color: #F2F2F2;
+		border-radius: 7px;
+	}
+	.funct_div{
+		border:1px solid #474747;
+		width: 50%;
+	}
+	h2,h4{
+		text-align: center;
+	}
+	table{
+		margin:0 auto;
+	}
+	p{
+
+	}
+	button#sort_data{
+		margin-left:45%;
+	}
+	#form2{
+		margin-left: 10%; 
+	}
+	</style>
+	
+</head>
+
+<body>
+	<div id="wrapper">
+		<h2>Functions Assignment</h2>
+		<div class="funct_div">
+			<h4>Please give input values to sort: </h4>
+			<div>
+
+				<form name="sort_form">
+					<table id="table_data">
+				  	    <tbody>
+					        <tr>
+					            <td><input type="text" id="cell-1"/></td>
+					        </tr>
+					        <tr>
+					            <td><input type="text" id="cell-2"/></td>
+					        </tr>
+					        <tr>
+					            <td><input type="text" id="cell-3"/></td>
+					        </tr>
+					        <tr>
+					            <td><input type="text" id="cell-4"/></td>
+					        </tr>
+					        <tr>
+					            <td><input type="text" id="cell-5"/></td>
+					        </tr>
+					        <tr>
+					            <td><input type="text" id="cell-6"/></td>
+					        </tr>
+				        </tbody>
+			    	</table>
+			    </form>
+	    	</div>
+	    	<button id="sort_data" onClick="sorted();">Sort</button>
+
+    	</div>
+    	<div>
+    		<h4>Please input values to apply different functions: </h4>
+    		<form name="functions" id="form2">
+		    	<label>First Input:</label> 
+		    		<input type="text" id="first" name="input_first" /> 
+		    	<label>Second Input:</label> 
+		    		<input type="text" id="second" name="input_second" /><br />
+		    	<label>Result:</label><span id="result"></span>
+    		</form>
+    	</div>
+    	
+    	<div class="funct_div">
+    		<button id="multiply_data" onClick="multiply();">Multiply/*</button>
+			<button id="subtract_data" onClick="subtract();">Subtarct/-</button>
+			<button id="add_data" onClick="add();">Add/+</button>
+			<button id="reverse" onClick="reverse();">Reverse</button>
+			<button id="reset" onClick="reset();">Reset</button>
+    	</div>
+	</div>
+		
+	<script type="text/javascript" src="functions.js"></script>
+</body>
+</html>

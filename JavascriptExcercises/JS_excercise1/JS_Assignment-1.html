@@ -1,0 +1,93 @@
+<!--1.Create a form in which we'll have 1 dropdown with options.
+	1. Ordered List
+	2.Unordered List.
+
+Once we select options, one more dropdown will be shown (subType of list) i.e
+	1.Ordered List
+		-Default. Decimal numbers (1, 2, 3, 4)
+		-Alphabetically ordered list, lowercase (a, b, c, d)
+		-Alphabetically ordered list, uppercase (A, B, C, D)
+		-Roman numbers, lowercase (i, ii, iii, iv)
+		-Roman numbers, uppercase (I, II, III, IV)
+
+	2.Unordered List
+		-Disc
+		-Square
+		-Circle
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment-1</title>
+</head>
+<script type="text/javascript" src="dropdown_script.js"></script>
+<style type="text/css">
+	#dropdown_2, #dropdown_3{
+		display: none;
+	}
+	div,h1,form,h4{
+		margin:0 auto;
+		padding: 10px;	
+	}
+	#wrapper{
+		margin:0 auto;
+		background-color: #f6cee3;
+		padding: 30px 30px 70px 30px;
+		border-radius: 7px;
+
+	}
+	h1{
+		margin:0 auto;
+		text-align: center;	
+		text-decoration: underline;
+	}
+	div{
+		width:50%;
+	}
+	#dropdown_bar{
+		width:85%;
+	}
+
+</style>
+<body>
+	<div id="wrapper">
+		<h1>Assignment 1</h1>
+		<hr />
+		<div id="dropdown_bar">
+			<h4>Change the List type by selecting from the dropdown menu:</h4>
+			<form name="dropdown_form">
+				<select id="dropdown_1" onchange="select_list()">
+					<option>Select List</option>
+					<option value="ordered">Ordered List</option>
+					<option value="unordered">UnOrdered List</option>
+				</select>
+				<select id="dropdown_2" onchange="ordered_list_type()">
+					<option>Select List type</option>
+					<option  value="default">Default</option>
+					<option  value="alpha-lower">Alphabet Lowercase</option>
+					<option  value="alpha-upper">Alphabet UpperCase</option>
+					<option  value="roman-lower">Roman Lowercase</option>
+					<option  value="roman-upper">Roman Uppercase</option>
+				</select>	
+				<select id="dropdown_3" onchange="unordered_list_type()">
+					<option>Select List type</option>
+					<option value="disc">Disc</option>
+					<option value="square">Square</option>
+					<option value="circle">Circle</option>
+				</select>
+				<button onclick="reset()">Reset</button>
+			</form>
+		</div>
+		<div>
+			<ul id="list">
+				<li>This is a list item 1.</li>
+				<li>This is a list item 2.</li>
+				<li>This is a list item 3.</li>
+				<li>This is a list item 4.</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

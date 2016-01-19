@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment_Part-2</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+	h2{
+		margin-left: 18%;
+	}
+	label{		
+		margin: 10px;
+	}
+	input, select{
+		margin: 5px 40px;
+	}
+	#input_field{
+		width:600px;
+		height:600px; 
+		float:left;
+	}
+	fieldset{
+		background-color: #FBEFF2;
+		border-radius: 7px;
+	}
+	#display_field{
+		width:400px;height:400px; 
+		float:left;
+		background-color: #CEF6F5;
+	}
+	.error{
+		color: red;
+		font-size: 12px;
+	}
+	ul{
+		list-style: none;
+		line-height: 20px;
+	}
+	.form_submit{
+		height: 30px;
+		padding-left: 20px;
+	}
+	span{
+		padding-left: 15px;
+	}
+	</style>
+	<script type="text/javascript" src="validate_form.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<h2> Form Validation </h2>
+		<fieldset id="input_field">
+		<form name="form">
+			<ul>
+				<li>
+					<label for="name">Name:</label><br />
+					<input type="text" id="name" name="name" /><span class="error" id="name_error"></span>
+				</li>
+				<li>
+					<label for="password">Password:</label><br />
+					<input type="password" id="password" name="password" /><span class="error" id="password_error"></span>
+				</li>
+				<li>
+					<label for="conf-password">Confirm Password:</label><br />
+					<input type="password" id="conf_password" name="conf-password" /><span class="error" id="conf_password_error"></span>
+				</li>
+				<li>
+					<label for="email">E-mail:</label><br />
+					<input type="email" id="email" name="email" /><span class="error" id="email_error"></span>
+				</li>
+				<li>
+					<label for="mobile_number">Mobile Number:</label><br />
+					<input type="text" id="mobile_number" name="mobile_number" /><span class="error" id="mobile_error"></span>
+				</li>
+				<li>				
+					<label for="country">Country:</label><br />
+					<select id="country">
+						<option value="India">India</option>
+						<option value="USA">USA</option>
+						<option>Australia</option>
+					</select>
+				</li>
+				<li>
+					<label for="state">State:</label><br />
+					<select id="state">
+						<option>Telangana</option>
+						<option>Maharashtra</option>
+						<option>Gujarat</option>
+					</select><br />
+					
+				</li>
+				<li>
+					<label for="city">City:</label><br />
+					<select id="city">
+						<option>Hyderabad</option>
+						<option>Warangal</option>
+						<option>Kazipet</option>
+					</select>
+				</li>
+				<li>		
+					<label for="pincode">Pincode:</label><br />
+					<input type="text" id="pincode" name="pincode"  />
+					<span class="error" id="pincode_error"></span>
+				</li>
+				<li>	
+					<label >Gender:</label><br />
+					<input type="radio" name="gender" value="male">Male
+					<input type="radio" name="gender" value="female">Female <br />
+					<span class="error" id="radio_error" ></span>
+				</li>
+				<li><input type="button" value="Submit" onclick="validateForm()" /> <button onclick="reset()">Reset</button></li>
+			</ul>
+			
+			
+		</form>
+		</form>
+		</fieldset>
+		<fieldset id="display_field">
+		<h2> Display Values </h2>
+		    <div class="form_submit"><h3 id="submit_success"></h3></div>
+		    <div>
+		    	<ul>
+					<li><label>Input Name:<span id="display_name"></span></label></li>
+					<li><label>Input Password:<span id="display_password"></span></label></li>
+					<li><label>Input Confirm Password:<span id="display_conf_password"></span></label></li>
+					<li><label>Input Email:<span id="display_email"></span></label></li>
+					<li><label>Input Mobile Number:<span id="display_mobile"></span></label></li>
+					<li><label>Input Country:<span id="display_country"></span></label></li>
+					<li><label>Input State:<span id="display_state"></span></label></li>
+					<li><label>Input City:<span id="display_city"></span></label></li>
+					<li><label>Input Pincode:<span id="display_pincode"></span></label></li>
+					<li><label>Input Gender:<span id="display_gender"></span></label></li>
+				</ul>
+
+		    </div>
+		   
+		</fieldset>
+	</div>
+
+	
+</body>
+</html>

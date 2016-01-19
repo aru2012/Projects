@@ -1,0 +1,70 @@
+<!--Assignment 2 - Highlighting various elements on click-->
+<!--As it is a short file file I have added the internal css and inline javascript i  the same html file-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stop Propagation</title>
+	<style type="text/css">
+	#grandest_parent{
+		margin:0 auto;
+		 width:360px; 
+		 padding:20px; 
+		 height:360px; 
+		 background-color:red;
+		}
+	#grand_parent{
+		margin:20px auto;
+		 width:260px; 
+		 padding:20px; 
+		 height:260px; 
+		 background-color:black;
+		}
+	#parent{
+		margin:20px auto;
+		 width:160px; 
+		 padding:20px; 
+		 height:160px; 
+		 background-color:green;
+		}
+	</style>
+</head>
+<body>
+	<div id="grandest_parent">
+		<div id="grand_parent">
+			<div id="parent">
+				<button id="buttn">
+					Click me
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		
+		$('#buttn').click(function(){
+				alert("clicked on button");
+		});
+		$('#parent').click(function(){
+				alert("clicked on parent div");
+		});
+		$('#grand_parent').click(function(){
+				alert("clicked on grand parent div");
+		});
+		$('#grandest_parent').click(function(){
+				alert("clicked on grand parent's parent div");
+		});
+
+		//for stopping propagation
+		/*$('#buttn').click(function(e){
+   				e.stopPropagation();
+		  alert("stopped propagation")
+		})*/
+
+	});
+		
+	</script>
+</body>
+</html>

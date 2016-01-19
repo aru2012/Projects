@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Slider</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+</head>
+<body>
+	<div class="container">
+		<div class="slider-wrapper">
+			<div id="banner">
+				<img style="height:100%;width:100%;"/>
+				<div id="banner-button"><img style="height:100%;width:100%;"></div>
+			</div>
+			<div class="thumbnails">
+				<ul id="thumb-images">
+					<li><img src="images/thumbs/thumb1.png" alt="thumb_one" id="one"></li>
+					<li><img src="images/thumbs/thumb2.png" alt="thumb_two" id="two"></li>
+					<li><img src="images/thumbs/thumb3.png" alt="thumb_three" id="three"></li>
+					<li><img src="images/thumbs/thumb4.png" alt="thumb_four" id="four"></li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+    		slide();
+		});
+	</script>
+</body>
+</html>

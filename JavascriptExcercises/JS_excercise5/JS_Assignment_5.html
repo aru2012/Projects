@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS_Assignment-5</title>
+	<link rel="stylesheet" type="text/css" href="moving_disc.css">
+</head>
+<body onkeyup="moving_disc(event)">
+	<div class="wrapper">
+		<div class="container">
+			<h2> Moving Disc </h2>
+			<div id="box">
+				<div id="disc">
+					<span>Hi</span>
+				</div>
+			</div>
+			<div class="controller">
+				<h4>Move Disc in Direction:</h4>
+				<ul>
+					<li><button id="left" onclick="move_disc(this.id)"  value="left" >Left</button></li>
+					<li><button id="right" onclick="move_disc(this.id)" value="right">Right</button></li>
+					<li><button id="top" onclick="move_disc(this.id)" value="top">Up</button></li>
+					<li><button id="bottom" onclick="move_disc(this.id)" value="bottom">Down</button></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript">
+    document.getElementById('disc').addEventListener("keypress", move_left);
+    function move_left(){
+	 alert("hello");
+	}
+	</script>
+ 	<script type="text/javascript" src="moving_disc.js"></script>
+</body>
+</html>

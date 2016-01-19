@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--Create a form that will have 5 <h1></h1> Statements on left side.
+Then create a dropdown where you can select one of those statements you want to modify.
+Now create radioButtons with few options to chose such as background color, color, font-style, margin,
+padding, show, hide, border.
+Once we select one of these options and submit. It should modify the selected statements according to
+stylings selected.-->
+<html>
+<head>
+	<title>Java Script Assignment 4</title>
+	<style type="text/css"> 
+		.wrapper{
+			margin: 0 auto;
+			background-color: #F4F0F1;
+		}
+		div,h2, h1{
+			margin: 0 auto;
+			padding: 10px;
+			width:80%;
+		}
+		#div_stmt{
+			margin: 0 auto;
+			width: 22%;
+		}
+		h2{	
+			font-size: 40px;
+			text-decoration: underline;
+			text-align: center;
+			color: #BBBBBB;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h2>Assignment 4</h2>
+		<div id="div_stmt">
+			<h1 id="stmt-1">Statement 1</h1>
+			<h1 id="stmt-2">Statement 2</h1>
+			<h1 id="stmt-3">Statement 3</h1>
+			<h1 id="stmt-4">Statement 4</h1>
+			<h1 id="stmt-5">Statement 5</h1>
+		</div>
+		<div>
+			<form name="stmt_style">
+				<label>Select a statement to style : </label>
+				<select id="stmt">
+					<option>Select</option>
+					<option value="st-1">Statement 1</option>
+					<option value="st-2">Statement 2</option>
+					<option value="st-3">Statement 3</option>
+					<option value="st-4">Statement 4</option>
+					<option value="st-5">Statement 5</option>
+				</select>
+				<p>
+				<label for="format">Style:</label>
+					<input type="radio" name="format" value="background-color"/>Background Color 
+					<input type="radio" name="format" value="color"/> Color
+					<input type="radio" name="format" value="fstyle"/>Font Style
+					<input type="radio" name="format" value="margin"/>Margin
+					<input type="radio" name="format" value="padding"/>Padding
+					<input type="radio" name="format" value="border"/>
+					Border
+					<input type="radio" name="format" value="display_stmt"/>Display
+
+				</p>
+				<p>
+				<label>Value:</label>
+					<input type="text" id="input_value" /> 
+				</p>
+			</form>
+			<button onclick="format()">Submit</button>
+			<button onclick="reset()">Reset</button>
+		</div>	
+	</div>
+	<script type="text/javascript" src="statement.js"></script>
+</body>
+</html>
