@@ -22,7 +22,7 @@
   });
   app.controller("ReviewController", function(){
     this.review = {};
-
+    this.products=gems;
     this.addReview = function(product){
       product.reviews.push(this.review); //push this product's review on array
       this.review = {}; //clear out the review so form will reset

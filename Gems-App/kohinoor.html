@@ -61,9 +61,9 @@ Using PanelController to organize the written code
 					<h4>Reviews</h4>
 						<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
 							<blockquote ng-repeat="review in product.reviews">
-							<b>{{reviewCtrl.review.stars}} Stars</b>
-								<span>{{reviewCtrl.review.body}}</span>
-								<cite>-{{reviewCtrl.review.author}}</cite>
+							<b>{{review.stars}} Stars</b>
+								<span>{{review.body}}</span>
+								<cite>-{{review.author}}</cite>
 							</blockquote>
 							<!--using ng-model to bind the form element value to the property-->
 							<select ng-model="reviewCtrl.review.stars">
@@ -78,13 +78,6 @@ Using PanelController to organize the written code
 							<input name="author" ng-model="reviewCtrl.review.author" type="email" placeholder="Type in your email"/>
 							<input type="submit" value="Submit" />
 						</form>
-						<!--
-							<input ng-model=".reviewCtrl.review.terms" type="checkbox" />I agree to the terms
-							<label>What color would you like?</label>
-							<input ng-model="reviewCtrl.review.color" type="radio" value="red"/>Red
-							<input ng-model="reviewCtrl.review.color" type="radio" value="blue" />Blue
-							<input ng-model="reviewCtrl.review.color" type="radio" value="green" />Green -->
-						
 				</div>
 			</section>
 		</li>
