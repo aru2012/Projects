@@ -1,0 +1,64 @@
+header
+  overflow: hidden
+  padding: 12px 30px
+  background: $base-color
+  div.hamburger-icon
+    float: left
+    cursor: pointer
+  div.search-icon
+    float: right
+    cursor: pointer
+  img
+    width: 19px
+    height: 17px
+  nav
+    position: absolute
+    width: 100%
+    top: 53px
+    left: 0px
+    background: #444
+    display: none
+    ul
+      margin: 15px 20px
+      li
+        padding: 5px
+        cursor: pointer
+
+@media screen and (min-width: 768px)
+  header
+    text-align: center
+    padding: 10px 0
+    div.hamburger-icon, div.search-icon, nav
+      float: none
+      display: inline-block
+    div.hamburger-icon
+      display: none
+    div.search-icon
+      margin: 5px 8px 0
+      vertical-align: top
+    nav
+      position: static
+      width: initial
+      background: none
+      ul.nav-links
+        margin: 0
+        overflow: hidden
+        > li
+          float: left
+          margin: 0px 15px
+          padding: 5px 8px
+          &:hover
+            background: #000
+            border-radius: 5px
+        
+
+        
+      
+
+
+      
+
+
+
+
+

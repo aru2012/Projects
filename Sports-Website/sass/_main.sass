@@ -1,0 +1,76 @@
+main
+  z-index: 3
+  section
+    margin: 20px 15px
+    h3
+      margin-top: 5px
+    article
+      margin: 0 0 20px
+      cursor: pointer
+      figure
+        img
+          width: 100%
+        figcaption
+          font-size: 0.8em 
+
+  section.updates
+    div.live-scores, div.upcoming-matches
+      border: 1px solid rgba(0,0,0,0.2)
+      margin-bottom: 3px
+      h3
+        padding: 5px
+      div
+        ul
+          li
+            padding: 5px
+            border-top: 1px solid rgba(0,0,0,0.2)
+            div:first-child
+              font-size: 0.8em
+            div:last-child
+              font-size: 0.9em
+            &:hover
+              background: #999
+              cursor: pointer
+              color: white
+
+
+  
+@media screen and (min-width: 768px)
+  main
+    margin: 0 auto
+    width: 80%
+    overflow: hidden
+    section
+      float: left
+    section.news
+      width: 70%
+      overflow: hidden
+      h3
+        font-size: 1.3em
+        margin-bottom: 10px
+      article
+        figure
+          figcaption
+            font-size: 1em
+      article:not(.main-news)
+        width: 32%
+        margin-right: 14px 
+        display: inline-block
+        float: left
+        img
+          min-height: 170px
+      article:last-child
+        margin-right: 0
+
+    section.updates
+      width: 22%
+      div.live-scores, div.upcoming-matches
+        div
+          ul
+            li
+              padding: 5px
+    
+           
+
+
+

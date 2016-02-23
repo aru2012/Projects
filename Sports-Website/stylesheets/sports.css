@@ -1,0 +1,259 @@
+/*! reset.sass: initializing all the elements to 0, none and base values */
+/* line 2, ../sass/_reset.sass */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, legend, caption, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0px;
+  padding: 0px;
+  border: 0px none;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 1, ../sass/_base.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 3, ../sass/_base.sass */
+body {
+  font-family: Arial, Open Sans;
+  background: #fff;
+  position: relative;
+}
+
+/* line 8, ../sass/_base.sass */
+ul {
+  list-style: none;
+}
+
+/* line 11, ../sass/_base.sass */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 1, ../sass/_header.sass */
+header {
+  overflow: hidden;
+  padding: 12px 30px;
+  background: #43ae71;
+}
+/* line 5, ../sass/_header.sass */
+header div.hamburger-icon {
+  float: left;
+  cursor: pointer;
+}
+/* line 8, ../sass/_header.sass */
+header div.search-icon {
+  float: right;
+  cursor: pointer;
+}
+/* line 11, ../sass/_header.sass */
+header img {
+  width: 19px;
+  height: 17px;
+}
+/* line 14, ../sass/_header.sass */
+header nav {
+  position: absolute;
+  width: 100%;
+  top: 53px;
+  left: 0px;
+  background: #444;
+  display: none;
+}
+/* line 21, ../sass/_header.sass */
+header nav ul {
+  margin: 15px 20px;
+}
+/* line 23, ../sass/_header.sass */
+header nav ul li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 28, ../sass/_header.sass */
+  header {
+    text-align: center;
+    padding: 10px 0;
+  }
+  /* line 31, ../sass/_header.sass */
+  header div.hamburger-icon, header div.search-icon, header nav {
+    float: none;
+    display: inline-block;
+  }
+  /* line 34, ../sass/_header.sass */
+  header div.hamburger-icon {
+    display: none;
+  }
+  /* line 36, ../sass/_header.sass */
+  header div.search-icon {
+    margin: 5px 8px 0;
+    vertical-align: top;
+  }
+  /* line 39, ../sass/_header.sass */
+  header nav {
+    position: static;
+    width: initial;
+    background: none;
+  }
+  /* line 43, ../sass/_header.sass */
+  header nav ul.nav-links {
+    margin: 0;
+    overflow: hidden;
+  }
+  /* line 46, ../sass/_header.sass */
+  header nav ul.nav-links > li {
+    float: left;
+    margin: 0px 15px;
+    padding: 5px 8px;
+  }
+  /* line 50, ../sass/_header.sass */
+  header nav ul.nav-links > li:hover {
+    background: #000;
+    border-radius: 5px;
+  }
+}
+/* line 1, ../sass/_main.sass */
+main {
+  z-index: 3;
+}
+/* line 3, ../sass/_main.sass */
+main section {
+  margin: 20px 15px;
+}
+/* line 5, ../sass/_main.sass */
+main section h3 {
+  margin-top: 5px;
+}
+/* line 7, ../sass/_main.sass */
+main section article {
+  margin: 0 0 20px;
+  cursor: pointer;
+}
+/* line 11, ../sass/_main.sass */
+main section article figure img {
+  width: 100%;
+}
+/* line 13, ../sass/_main.sass */
+main section article figure figcaption {
+  font-size: 0.8em;
+}
+/* line 17, ../sass/_main.sass */
+main section.updates div.live-scores, main section.updates div.upcoming-matches {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 3px;
+}
+/* line 20, ../sass/_main.sass */
+main section.updates div.live-scores h3, main section.updates div.upcoming-matches h3 {
+  padding: 5px;
+}
+/* line 24, ../sass/_main.sass */
+main section.updates div.live-scores div ul li, main section.updates div.upcoming-matches div ul li {
+  padding: 5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* line 27, ../sass/_main.sass */
+main section.updates div.live-scores div ul li div:first-child, main section.updates div.upcoming-matches div ul li div:first-child {
+  font-size: 0.8em;
+}
+/* line 29, ../sass/_main.sass */
+main section.updates div.live-scores div ul li div:last-child, main section.updates div.upcoming-matches div ul li div:last-child {
+  font-size: 0.9em;
+}
+/* line 31, ../sass/_main.sass */
+main section.updates div.live-scores div ul li:hover, main section.updates div.upcoming-matches div ul li:hover {
+  background: #999;
+  cursor: pointer;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 39, ../sass/_main.sass */
+  main {
+    margin: 0 auto;
+    width: 80%;
+    overflow: hidden;
+  }
+  /* line 43, ../sass/_main.sass */
+  main section {
+    float: left;
+  }
+  /* line 45, ../sass/_main.sass */
+  main section.news {
+    width: 70%;
+    overflow: hidden;
+  }
+  /* line 48, ../sass/_main.sass */
+  main section.news h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+  }
+  /* line 53, ../sass/_main.sass */
+  main section.news article figure figcaption {
+    font-size: 1em;
+  }
+  /* line 55, ../sass/_main.sass */
+  main section.news article:not(.main-news) {
+    width: 32%;
+    margin-right: 14px;
+    display: inline-block;
+    float: left;
+  }
+  /* line 60, ../sass/_main.sass */
+  main section.news article:not(.main-news) img {
+    min-height: 170px;
+  }
+  /* line 62, ../sass/_main.sass */
+  main section.news article:last-child {
+    margin-right: 0;
+  }
+  /* line 65, ../sass/_main.sass */
+  main section.updates {
+    width: 22%;
+  }
+  /* line 70, ../sass/_main.sass */
+  main section.updates div.live-scores div ul li, main section.updates div.upcoming-matches div ul li {
+    padding: 5px;
+  }
+}
+/* line 1, ../sass/_footer.sass */
+footer {
+  background: #43ae71;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 40px 0;
+}
+/* line 5, ../sass/_footer.sass */
+footer div.footer-wrap {
+  text-align: center;
+}
+/* line 7, ../sass/_footer.sass */
+footer div.footer-wrap p {
+  color: #fff;
+}
+/* line 10, ../sass/_footer.sass */
+footer div.footer-wrap ul li {
+  padding: 3px;
+}
+/* line 13, ../sass/_footer.sass */
+footer div.footer-wrap ul li a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 20, ../sass/_footer.sass */
+  footer div.footer-wrap p, footer div.footer-wrap ul {
+    display: inline-block;
+  }
+  /* line 22, ../sass/_footer.sass */
+  footer div.footer-wrap ul {
+    overflow: hidden;
+    vertical-align: top;
+  }
+  /* line 25, ../sass/_footer.sass */
+  footer div.footer-wrap ul li {
+    float: left;
+    padding: 0 5px;
+  }
+}
