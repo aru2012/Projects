@@ -14,7 +14,7 @@ header
   nav
     position: absolute
     width: 100%
-    top: 53px
+    top: 45px
     left: 0px
     background: #444
     display: none
@@ -23,7 +23,14 @@ header
       li
         padding: 5px
         cursor: pointer
-
+.nav-opened .close-nav
+  display: block
+.nav-opened .open-nav
+  display: none
+.close-nav
+  display: none
+.nav-opened nav
+  display: block
 @media screen and (min-width: 768px)
   header
     text-align: center
@@ -50,7 +57,7 @@ header
           &:hover
             background: #000
             border-radius: 5px
-        
+
 
         
       
