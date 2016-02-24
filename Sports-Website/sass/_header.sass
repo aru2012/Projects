@@ -5,9 +5,14 @@ header
   div.hamburger-icon
     float: left
     cursor: pointer
-  div.search-icon
+  div.search
     float: right
     cursor: pointer
+  div.input_search, div.search-icon
+    display: inline-block
+  div.input_search
+    vertical-align: top
+
   img
     width: 19px
     height: 17px
@@ -24,25 +29,32 @@ header
         padding: 5px
         cursor: pointer
 .nav-opened .close-nav
-  display: block
+  display: inline-block
 .nav-opened .open-nav
   display: none
-.close-nav
+.close-nav, .close
   display: none
 .nav-opened nav
   display: block
+.search-opened .close
+  display: inline-block
+
 @media screen and (min-width: 768px)
   header
     text-align: center
     padding: 10px 0
-    div.hamburger-icon, div.search-icon, nav
+    div.hamburger-icon, div.search, nav
       float: none
       display: inline-block
     div.hamburger-icon
       display: none
-    div.search-icon
-      margin: 5px 8px 0
+    div.search
+      margin: 5px 8px 0 0
       vertical-align: top
+    div.input_search
+      vertical-align: top
+      margin: 0 8px 0
+    
     nav
       position: static
       width: initial

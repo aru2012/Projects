@@ -3,9 +3,7 @@
 
 $(function(){
 	mobile_menu(); 
-	$('div#arrow').on('click', function() {
-		$('.content-outer').toggleClass('opened');
-	});
+	search_icon();
 	
 });
 
@@ -16,9 +14,9 @@ function mobile_menu (event) {
 	});
 	
 }
-function search_icon (event) {
+function search_icon () {
 	$('div.search-icon').on('click', function() {				
-		$('header').toggleClass('search-opened');
+		$('div.search').toggleClass('search-opened');
 	});
 	
 }

@@ -16,16 +16,17 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 /* line 3, ../sass/_base.sass */
 body {
   font-family: Arial, Open Sans;
-  background: #fff;
+  background: #000;
+  color: #fff;
   position: relative;
 }
 
-/* line 8, ../sass/_base.sass */
+/* line 9, ../sass/_base.sass */
 ul {
   list-style: none;
 }
 
-/* line 11, ../sass/_base.sass */
+/* line 12, ../sass/_base.sass */
 a {
   color: #fff;
   text-decoration: none;
@@ -35,7 +36,7 @@ a {
 header {
   overflow: hidden;
   padding: 12px 30px;
-  background: #43ae71;
+  background: #002080;
 }
 /* line 5, ../sass/_header.sass */
 header div.hamburger-icon {
@@ -43,72 +44,110 @@ header div.hamburger-icon {
   cursor: pointer;
 }
 /* line 8, ../sass/_header.sass */
-header div.search-icon {
+header div.search {
   float: right;
   cursor: pointer;
 }
 /* line 11, ../sass/_header.sass */
+header div.input_search, header div.search-icon {
+  display: inline-block;
+}
+/* line 13, ../sass/_header.sass */
+header div.input_search {
+  vertical-align: top;
+}
+/* line 16, ../sass/_header.sass */
 header img {
   width: 19px;
   height: 17px;
 }
-/* line 14, ../sass/_header.sass */
+/* line 19, ../sass/_header.sass */
 header nav {
   position: absolute;
   width: 100%;
-  top: 53px;
+  top: 45px;
   left: 0px;
   background: #444;
   display: none;
 }
-/* line 21, ../sass/_header.sass */
+/* line 26, ../sass/_header.sass */
 header nav ul {
   margin: 15px 20px;
 }
-/* line 23, ../sass/_header.sass */
+/* line 28, ../sass/_header.sass */
 header nav ul li {
   padding: 5px;
   cursor: pointer;
 }
 
+/* line 31, ../sass/_header.sass */
+.nav-opened .close-nav {
+  display: inline-block;
+}
+
+/* line 33, ../sass/_header.sass */
+.nav-opened .open-nav {
+  display: none;
+}
+
+/* line 35, ../sass/_header.sass */
+.close-nav, .close {
+  display: none;
+}
+
+/* line 37, ../sass/_header.sass */
+.nav-opened nav {
+  display: block;
+}
+
+/* line 39, ../sass/_header.sass */
+.search-opened .close {
+  display: inline-block;
+}
+
 @media screen and (min-width: 768px) {
-  /* line 28, ../sass/_header.sass */
+  /* line 43, ../sass/_header.sass */
   header {
     text-align: center;
     padding: 10px 0;
   }
-  /* line 31, ../sass/_header.sass */
-  header div.hamburger-icon, header div.search-icon, header nav {
+  /* line 46, ../sass/_header.sass */
+  header div.hamburger-icon, header div.search, header nav {
     float: none;
     display: inline-block;
   }
-  /* line 34, ../sass/_header.sass */
+  /* line 49, ../sass/_header.sass */
   header div.hamburger-icon {
     display: none;
   }
-  /* line 36, ../sass/_header.sass */
-  header div.search-icon {
-    margin: 5px 8px 0;
+  /* line 51, ../sass/_header.sass */
+  header div.search {
+    margin: 5px 8px 0 0;
     vertical-align: top;
   }
-  /* line 39, ../sass/_header.sass */
+  /* line 54, ../sass/_header.sass */
+  header div.input_search {
+    vertical-align: top;
+    margin: 0 8px 0;
+  }
+  /* line 58, ../sass/_header.sass */
   header nav {
     position: static;
     width: initial;
     background: none;
   }
-  /* line 43, ../sass/_header.sass */
+  /* line 62, ../sass/_header.sass */
   header nav ul.nav-links {
     margin: 0;
     overflow: hidden;
   }
-  /* line 46, ../sass/_header.sass */
+  /* line 65, ../sass/_header.sass */
   header nav ul.nav-links > li {
     float: left;
     margin: 0px 15px;
     padding: 5px 8px;
   }
-  /* line 50, ../sass/_header.sass */
+  /* line 69, ../sass/_header.sass */
   header nav ul.nav-links > li:hover {
     background: #000;
     border-radius: 5px;
@@ -151,20 +190,20 @@ main section.updates div.live-scores h3, main section.updates div.upcoming-match
 /* line 24, ../sass/_main.sass */
 main section.updates div.live-scores div ul li, main section.updates div.upcoming-matches div ul li {
   padding: 5px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
-/* line 27, ../sass/_main.sass */
+/* line 28, ../sass/_main.sass */
 main section.updates div.live-scores div ul li div:first-child, main section.updates div.upcoming-matches div ul li div:first-child {
   font-size: 0.8em;
 }
-/* line 29, ../sass/_main.sass */
+/* line 30, ../sass/_main.sass */
 main section.updates div.live-scores div ul li div:last-child, main section.updates div.upcoming-matches div ul li div:last-child {
   font-size: 0.9em;
 }
-/* line 31, ../sass/_main.sass */
+/* line 32, ../sass/_main.sass */
 main section.updates div.live-scores div ul li:hover, main section.updates div.upcoming-matches div ul li:hover {
-  background: #999;
-  cursor: pointer;
+  background: #333;
   color: white;
 }
 
@@ -219,7 +258,7 @@ main section.updates div.live-scores div ul li:hover, main section.updates div.u
 }
 /* line 1, ../sass/_footer.sass */
 footer {
-  background: #43ae71;
+  background: #002080;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 40px 0;
 }
@@ -238,20 +277,19 @@ footer div.footer-wrap ul li {
 /* line 13, ../sass/_footer.sass */
 footer div.footer-wrap ul li a:hover {
   text-decoration: underline;
-  color: #333;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 20, ../sass/_footer.sass */
+  /* line 19, ../sass/_footer.sass */
   footer div.footer-wrap p, footer div.footer-wrap ul {
     display: inline-block;
   }
-  /* line 22, ../sass/_footer.sass */
+  /* line 21, ../sass/_footer.sass */
   footer div.footer-wrap ul {
     overflow: hidden;
     vertical-align: top;
   }
-  /* line 25, ../sass/_footer.sass */
+  /* line 24, ../sass/_footer.sass */
   footer div.footer-wrap ul li {
     float: left;
     padding: 0 5px;
